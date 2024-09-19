@@ -1,0 +1,50 @@
+{
+  "id": "cae21dc26b5aa054e5a7687e42ddebee",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "itemTypeinGroup_2",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "type": "composite",
+      "value": [
+        {
+          "elm": "itemTypein_21",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "O"
+        },
+        {
+          "elm": "itemTypein_22",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "K"
+        }
+      ]
+    },
+    {
+      "elm": "itemTypeinGroup_3",
+      "markType": "list",
+      "markedBy": "engine",
+      "type": "composite",
+      "value": [
+        {
+          "elm": "itemTypein_31",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "O"
+        },
+        {
+          "elm": "itemTypein_32",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "K"
+        }
+      ]
+    }
+  ]
+}

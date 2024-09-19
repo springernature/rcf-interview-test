@@ -1,0 +1,105 @@
+{
+	"parser": "@babel/eslint-parser",
+	"plugins": ["jest", "flowtype", "import", "json"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:flowtype/recommended",
+		"plugin:import/errors",
+		"plugin:prettier/recommended",
+
+	],
+	"globals": {
+		"__webpack_public_path__": true,
+		"__moduleName": true,
+		"RCF": true,
+		"findAndReplaceDOMText": true,
+		"Phaser": true,
+		"jest": true,
+		"lamejs": true,
+		"Recorder": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"modules": true,
+			"jsx": true
+		}
+	},
+	"settings": {
+		"flowType": {
+			"onlyFilesWithFlowAnnotation": true
+		},
+		"import/resolver": {
+			"babel-module": {}
+		}
+	},
+	"env": {
+		"es6": true,
+		"node": true,
+		"browser": true
+	},
+	"rules": {
+		"camelcase": [
+			"error",
+			{
+				"properties": "never"
+			}
+		],
+		"no-dupe-class-members": "off",
+		"no-dupe-args": "error",
+		"block-scoped-var": "error",
+		"new-parens": "error",
+		"no-duplicate-imports": 0,
+
+		"import/no-anonymous-default-export": ["error", {
+			"allowArray": false,
+			"allowArrowFunction": false,
+			"allowAnonymousClass": false,
+			"allowAnonymousFunction": false,
+			"allowCallExpression": true, // The true value here is for backward compatibility
+			"allowLiteral": false,
+			"allowObject": false
+		}],
+		"valid-jsdoc": [
+			"warn",
+			{
+				"requireReturn": false
+			}
+		],
+		"accessor-pairs": "error",
+		"array-callback-return": "error",
+		"no-undef": "error",
+		"no-constant-condition": [
+			"error",
+			{
+				"checkLoops": false
+			}
+		],
+		"no-extra-boolean-cast": 0,
+		"no-console": 0,
+		"curly": 0,
+		"no-extra-semi": 1,
+		"semi": ["error", "always"]
+	},
+	"overrides": [
+		{
+			"files": ["*.test.js"],
+			"rules": {
+				"no-import-assign": "off",
+				"jest/no-disabled-tests": "error",
+				"jest/no-focused-tests": "error",
+				"jest/no-identical-title": "error",
+				"jest/prefer-to-have-length": "error",
+				"jest/valid-expect": "error",
+				"import/namespace": "off",
+				"no-unused-vars": "error",
+				"no-redeclare": "off"
+			},
+			"env": {
+				"jasmine": true,
+				"jest/globals": true
+			}
+		}
+	]
+}

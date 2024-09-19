@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="108px" viewBox="0 0 36 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-move-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="arrow-right" transform="translate(-43.000000, -2.000000)" fill="#373D3D">
+        <path d="M64.0652283,15.1118448 L75,15.1118448 L75,22.5945537 L64.0652283,22.5945537 L64.0652283,28 L53,18.7286377 L64.0652283,10 L64.0652283,15.1118448 Z" id="arrow-move-right" transform="translate(64.000000, 19.000000) scale(-1, 1) translate(-64.000000, -19.000000) "></path>
+    </g>
+    <g id="arrow-right-selected" transform="translate(-43.000000, 34.000000)" fill="#FFFFFF">
+        <path d="M64.0652283,15.1118448 L75,15.1118448 L75,22.5945537 L64.0652283,22.5945537 L64.0652283,28 L53,18.7286377 L64.0652283,10 L64.0652283,15.1118448 Z" id="arrow-move-right" transform="translate(64.000000, 19.000000) scale(-1, 1) translate(-64.000000, -19.000000) "></path>
+    </g>
+    <g id="arrow-right-hover" transform="translate(-43.000000, 70.000000)" fill="#DDF32B">
+        <path d="M64.0652283,15.1118448 L75,15.1118448 L75,22.5945537 L64.0652283,22.5945537 L64.0652283,28 L53,18.7286377 L64.0652283,10 L64.0652283,15.1118448 Z" id="arrow-move-right" transform="translate(64.000000, 19.000000) scale(-1, 1) translate(-64.000000, -19.000000) "></path>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+{
+  "id": "3fa55c10093e4a578985fcca46b99c67",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "listenAndColour_1",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "blue",
+          "type": "list",
+          "markType": "list",
+          "markedBy": "engine",
+          "value": [
+            "cat1"
+          ]
+        },
+        {
+          "elm": "yellow",
+          "type": "list",
+          "markType": "list",
+          "markedBy": "engine",
+          "value": [
+            "dog1"
+          ]
+        },
+        {
+          "elm": "red",
+          "type": "list",
+          "markType": "list",
+          "markedBy": "engine",
+          "value": [
+            "balloon2",
+            "balloon3",
+            "balloon4",
+            "balloon5"
+          ]
+        }
+      ]
+    }
+  ]
+}

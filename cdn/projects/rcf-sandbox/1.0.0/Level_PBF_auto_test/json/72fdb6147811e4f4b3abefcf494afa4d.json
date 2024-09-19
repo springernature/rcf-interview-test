@@ -1,0 +1,50 @@
+{
+  "id": "72fdb6147811e4f4b3abefcf494afa4d",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "sb_1",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "item_0",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6"
+      ],
+      "value": [
+        "doyouknowwherethetoiletsare?",
+        "doyouknowwherethetoiletsare",
+        "youknowwherethetoiletsare"
+      ]
+    },
+    {
+      "elm": "sb_3",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4",
+        "i_5",
+        "i_6",
+        "i_7",
+        "i_8"
+      ],
+      "value": [
+        "doyouknowwherethetoiletsare?",
+        "doyouknowwherethellamasare?",
+        "dothetoiletsknowwhereyouare?",
+        "dothellamasknowwhereyouare?",
+        "wherearethetoilets?",
+        "wherearethellamas?"
+      ]
+    }
+  ]
+}

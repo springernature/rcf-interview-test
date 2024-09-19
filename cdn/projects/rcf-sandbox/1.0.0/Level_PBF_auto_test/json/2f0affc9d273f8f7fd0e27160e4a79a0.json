@@ -1,0 +1,45 @@
+{
+  "id": "2f0affc9d273f8f7fd0e27160e4a79a0",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "sb_1",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "item_0",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6"
+      ],
+      "value": [
+        "doyouknowwherethetoiletsare?",
+        "doyouknowwherethetoiletsare",
+        "youknowwherethetoiletsare"
+      ]
+    },
+    {
+      "elm": "sb_2",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4",
+        "i_5",
+        "i_6",
+        "i_7",
+        "i_8"
+      ],
+      "value": [
+        "doornumberoneanddoornumbertwo!"
+      ]
+    }
+  ]
+}

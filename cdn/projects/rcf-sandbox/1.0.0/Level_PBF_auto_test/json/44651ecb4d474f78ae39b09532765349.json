@@ -1,0 +1,13 @@
+{
+  "id": "44651ecb4d474f78ae39b09532765349",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "radio_1",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "item_1"
+    }
+  ]
+}

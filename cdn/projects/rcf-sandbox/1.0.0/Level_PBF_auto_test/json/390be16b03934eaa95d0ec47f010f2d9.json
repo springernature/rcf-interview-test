@@ -1,0 +1,15 @@
+{
+  "id": "390be16b03934eaa95d0ec47f010f2d9",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "mlTextInput_1",
+      "markType": "item",
+      "markedBy": "teacher",
+      "type": "simple",
+      "required": "n",
+      "max_score": 5,
+      "value": ""
+    }
+  ]
+}

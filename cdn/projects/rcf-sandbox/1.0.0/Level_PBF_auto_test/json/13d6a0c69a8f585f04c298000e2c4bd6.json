@@ -1,0 +1,176 @@
+{
+  "id": "13d6a0c69a8f585f04c298000e2c4bd6",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "icdb_1",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_1",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_5"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_2",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_2",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_10"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_3",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_3",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_15"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_4",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_4",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_20"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_5",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_5",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_25"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_6",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_6",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_30"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_7",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_7",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_35"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_8",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_8",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_40"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_9",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_9",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_45"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "icdb_10",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_10",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_50"
+          ]
+        }
+      ]
+    }
+  ]
+}

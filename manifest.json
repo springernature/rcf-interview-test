@@ -1,0 +1,88 @@
+{
+	"activities": [
+	  {
+		"id": "242d4dda46d571c7a4bbc6680325f5f2",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/242d4dda46d571c7a4bbc6680325f5f2.html",
+		"json": "Level_PBF_auto_test/json/242d4dda46d571c7a4bbc6680325f5f2.json"
+	  },
+	  {
+		"id": "c96fed5a92d155a978a7f0dcef0ba00f",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/c96fed5a92d155a978a7f0dcef0ba00f.html",
+		"json": "Level_PBF_auto_test/json/c96fed5a92d155a978a7f0dcef0ba00f.json"
+	  },
+	  {
+		"id": "2f0affc9d273f8f7fd0e27160e4a79a0",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/2f0affc9d273f8f7fd0e27160e4a79a0.html",
+		"json": "Level_PBF_auto_test/json/2f0affc9d273f8f7fd0e27160e4a79a0.json"
+	  },
+	  {
+		"id": "d03e8ae2428b41ca88477df714125bf1",
+		"gradableType": "non-gradable",
+		"html": "Level_PBF_auto_test/html/d03e8ae2428b41ca88477df714125bf1.html",
+		"json": "Level_PBF_auto_test/json/d03e8ae2428b41ca88477df714125bf1.json"
+	  },
+	  {
+		"id": "79899a59931749b8878f692368d4f15b",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/79899a59931749b8878f692368d4f15b.html",
+		"json": "Level_PBF_auto_test/json/79899a59931749b8878f692368d4f15b.json"
+	  },
+	  {
+		"id": "e807b12cd0b046498b4de5b38bd0d978",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/e807b12cd0b046498b4de5b38bd0d978.html",
+		"json": "Level_PBF_auto_test/json/e807b12cd0b046498b4de5b38bd0d978.json"
+	  },
+	  {
+		"id": "3fa55c10093e4a578985fcca46b99c67",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/3fa55c10093e4a578985fcca46b99c67.html",
+		"json": "Level_PBF_auto_test/json/3fa55c10093e4a578985fcca46b99c67.json"
+	  },
+	  {
+		"id": "242d4dda46d571c7a4bbc6680325f5f2",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/242d4dda46d571c7a4bbc6680325f5f2.html",
+		"json": "Level_PBF_auto_test/json/242d4dda46d571c7a4bbc6680325f5f2.json"
+	  },
+	  {
+		"id": "c96fed5a92d155a978a7f0dcef0ba00f",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/c96fed5a92d155a978a7f0dcef0ba00f.html",
+		"json": "Level_PBF_auto_test/json/c96fed5a92d155a978a7f0dcef0ba00f.json"
+	  },
+	  {
+		"id": "b29fb5f4d9d15b2145c73fd0c77d13e3",
+		"gradableType": "open-non-gradable",
+		"html": "Level_PBF_auto_test/html/b29fb5f4d9d15b2145c73fd0c77d13e3.html",
+		"json": "Level_PBF_auto_test/json/b29fb5f4d9d15b2145c73fd0c77d13e3.json"
+	  },
+	  {
+		"id": "0ab806a6c7848560e3de0f455866725d",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/0ab806a6c7848560e3de0f455866725d.html",
+		"json": "Level_PBF_auto_test/json/0ab806a6c7848560e3de0f455866725d.json"
+	  },
+	  {
+		"id": "d4dda6772c9199c42e5f8d27487f2c24",
+		"gradableType": "open-non-gradable",
+		"html": "Level_PBF_auto_test/html/d4dda6772c9199c42e5f8d27487f2c24.html",
+		"json": "Level_PBF_auto_test/json/d4dda6772c9199c42e5f8d27487f2c24.json"
+	  },
+	  {
+		  "id": "750aa033fd405090e07e1b5fa45f6f5f",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/750aa033fd405090e07e1b5fa45f6f5f.html",
+		"json": "Level_PBF_auto_test/json/750aa033fd405090e07e1b5fa45f6f5f.json"
+	  },
+	  {
+		"id": "5c626edeb91518afa277e87afb5e7ad5",
+		"gradableType": "closed-gradable",
+		"html": "Level_PBF_auto_test/html/5c626edeb91518afa277e87afb5e7ad5.html",
+		"json": "Level_PBF_auto_test/json/5c626edeb91518afa277e87afb5e7ad5.json"
+	  }
+	]
+  }

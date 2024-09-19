@@ -1,0 +1,20 @@
+{
+  "id": "112f21f50d7646142661d4eafb45082e",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "ak_1",
+      "type": "answerKey",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "value": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "85891bbe2b4023cd30122c4afa2b79d1",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "icdb_1",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": []
+    },
+    {
+      "elm": "icdb_3",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "icd_23",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "item_1"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "itemRadio_2",
+      "type": "simple",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "value": ""
+    },
+    {
+      "elm": "itemRadio_3",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "item_0"
+    },
+    {
+      "elm": "itemTypein_1",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "Correct"
+    },
+    {
+      "elm": "itemTypein_2",
+      "type": "simple",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "value": "Correct"
+    },
+    {
+      "elm": "itemTypein_3",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "Correct"
+    },
+    {
+      "elm": "itemSelectableText_1",
+      "type": "list",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": []
+    },
+    {
+      "elm": "itemSelectableText_2",
+      "type": "list",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "value": []
+    },
+    {
+      "elm": "itemSelectableText_3",
+      "type": "list",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        "es1"
+      ]
+    },
+    {
+      "elm": "itemTypeinGroup_2",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "type": "composite",
+      "value": [
+        {
+          "elm": "itemTypein_21",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "O"
+        },
+        {
+          "elm": "itemTypein_22",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "K"
+        }
+      ]
+    },
+    {
+      "elm": "itemTypeinGroup_3",
+      "markType": "list",
+      "markedBy": "engine",
+      "type": "composite",
+      "value": [
+        {
+          "elm": "itemTypein_31",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "O"
+        },
+        {
+          "elm": "itemTypein_32",
+          "type": "simple",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": "K"
+        }
+      ]
+    },
+    {
+      "elm": "dropDown_3",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "item_2"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "3222c1da5a468900e5f10c585163a65c",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "wi_1",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4",
+        "i_5",
+        "i_6",
+        "i_7",
+        "i_8"
+      ],
+      "value": [
+        "prefixdoornumberoneanddoornumbertwo!suffix"
+      ]
+    },
+    {
+      "elm": "wi_2",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "item_0",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6"
+      ],
+      "value": [
+        "doyouknowwherethetoiletsare?",
+        "doyouknowwherethetoiletsare?we",
+        "youknowwherethetoiletsare"
+      ]
+    },
+    {
+      "elm": "wi_3",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4",
+        "i_5",
+        "i_6",
+        "i_7",
+        "i_8",
+        "i_9"
+      ],
+      "value": [
+        "doyouknowwherethetoiletsare?positionable",
+        "positionabledoyouknowwherethetoiletsare?",
+        "dopositionableyouknowwherethetoiletsare?",
+        "doyoupositionableknowwherethetoiletsare?",
+        "doyouknowpositionablewherethetoiletsare?",
+        "doyouknowwherepositionablethetoiletsare?",
+        "doyouknowwherethepositionabletoiletsare?",
+        "doyouknowwherethetoiletspositionableare?",
+        "doyouknowwherethetoiletsarepositionable?"
+      ]
+    },
+    {
+      "elm": "wi_4",
+      "type": "choice",
+      "markType": "unmarked",
+      "markedBy": "nobody",
+      "items": [
+        "i_1",
+        "i_2",
+        "i_3",
+        "i_4",
+        "i_5",
+        "i_6",
+        "i_7"
+      ],
+      "value": [
+        "whattimedoestheshowstart?",
+        "whattimedoesthegamestart?"
+      ]
+    }
+  ]
+}

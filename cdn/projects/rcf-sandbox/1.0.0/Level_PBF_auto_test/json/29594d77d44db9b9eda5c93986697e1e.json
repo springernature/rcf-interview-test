@@ -1,0 +1,35 @@
+{
+  "id": "29594d77d44db9b9eda5c93986697e1e",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "categorise_1",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "category_1",
+          "type": "list",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": [
+            "item_2",
+            "item_3"
+          ]
+        },
+        {
+          "elm": "category_2",
+          "type": "list",
+          "markType": "item",
+          "markedBy": "engine",
+          "value": [
+            "item_4",
+            "item_5",
+            "item_6"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "7a262fd5a51042f885705afe4fa05178",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "itemTypein_1",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "She"
+    },
+    {
+      "elm": "itemTypein_2",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "I"
+    },
+    {
+      "elm": "itemTypein_3",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "He"
+    }
+  ]
+}

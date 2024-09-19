@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 2048" enable-background="new 0 0 512 2048" xml:space="preserve" width="512px" height="2048px">
+	<g id="play-default">
+		<path id="Triangle-1" fill="#373D3D" d="M322.2,254.8c1.4,0.9,1.4,2.3,0,3.1l-151,93.3c-1.4,0.9-2.5,0.2-2.5-1.4V162.9c0-1.6,1.1-2.3,2.5-1.4
+			L322.2,254.8z"/>
+	</g>
+	<g id="play-hover" transform="translate(0 512)">
+		<path id="Triangle-2" fill="#20A9C4" d="M322.2,254.8c1.4,0.9,1.4,2.3,0,3.1l-151,93.3c-1.4,0.9-2.5,0.2-2.5-1.4V162.9c0-1.6,1.1-2.3,2.5-1.4
+			L322.2,254.8z"/>
+	</g>
+	<g id="play-active" transform="translate(0 1024)">
+		<path id="Triangle-3" fill="#FFFFFF" d="M322.2,254.8c1.4,0.9,1.4,2.3,0,3.1l-151,93.3c-1.4,0.9-2.5,0.2-2.5-1.4V162.9c0-1.6,1.1-2.3,2.5-1.4
+			L322.2,254.8z"/>
+	</g>
+	<g id="play-active" transform="translate(0 1536)">
+		<path id="Triangle-3" fill="#C5C5C5" d="M322.2,254.8c1.4,0.9,1.4,2.3,0,3.1l-151,93.3c-1.4,0.9-2.5,0.2-2.5-1.4V162.9c0-1.6,1.1-2.3,2.5-1.4
+			L322.2,254.8z"/>
+	</g>
+</svg>

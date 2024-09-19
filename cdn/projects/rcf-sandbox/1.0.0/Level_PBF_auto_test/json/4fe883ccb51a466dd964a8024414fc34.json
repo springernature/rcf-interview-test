@@ -1,0 +1,104 @@
+{
+  "id": "4fe883ccb51a466dd964a8024414fc34",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "test_1",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "itemComplexDroppable_2",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_1"
+          ]
+        },
+        {
+          "elm": "itemComplexDroppable_3",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_4"
+          ]
+        },
+        {
+          "elm": "itemComplexDroppable_4",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_1"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "test_2",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "itemComplexDroppable_4",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_1"
+          ]
+        },
+        {
+          "elm": "itemComplexDroppable_5",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_1",
+            "cd_3"
+          ]
+        }
+      ]
+    },
+    {
+      "elm": "test_3",
+      "type": "composite",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": [
+        {
+          "elm": "itemComplexDroppable_4",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_1"
+          ]
+        },
+        {
+          "elm": "itemComplexDroppable_5",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_1",
+            "cd_5"
+          ]
+        },
+        {
+          "elm": "itemComplexDroppable_6",
+          "type": "choice",
+          "markedBy": "engine",
+          "markType": "item",
+          "value": [
+            "cd_5"
+          ]
+        }
+      ]
+    }
+  ]
+}

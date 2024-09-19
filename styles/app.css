@@ -1,0 +1,41 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: white;
+}
+
+#rcfContainer {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 30% 70%;
+	grid-template-rows: 1fr;
+	grid-template-areas: ". .";
+}
+
+#activities {
+	border: 1px solid #aaa;
+	overflow-y: scroll;
+	max-height: 90vh;
+}
+
+#activities .activityLink {
+	border-bottom: 1px dotted;
+	color: blue;
+	cursor: pointer;
+}
+
+#activities a.activityLink:active {
+	color: red;
+}
+
+#activity-contents {
+	border: 1px solid #aaa;
+	min-height: 90vh;
+	max-height: 90vh;
+	overflow-y: scroll;
+	background: cyan;
+}
+
+.title {
+	font-weight: bold;
+	color: green;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>RCF interview test</title>
+
+		<!-- load rcf core / mobile styles first-->
+		<link rel="stylesheet" href="/cdn/rcf/2.1.64/style-min/rcf_core.min.css">
+
+		<!-- load rcf desktop styles next-->
+		<link rel="stylesheet" href="/cdn/rcf/2.1.64/style-min/rcf_desktop.min.css">
+
+		<!-- load project styles -->
+		<link rel="stylesheet" href="/cdn/projects/rcf-sandbox/1.0.0/shared/style/rcf-sandbox.css"></link>
+
+		<!-- load level styles -->
+		<link rel="stylesheet" href="/cdn/projects/rcf-sandbox/1.0.0/Level_PBF_auto_test/assets/style/level.css"></link>
+		<link ref="stylesheet" href="/cdn/projects/rcf-sandbox/1.0.0/Level_PBF_auto_test/assets/style/level_768.css"></link>
+
+		<!-- load app styles for this app-->
+		<link rel="stylesheet" href="/styles/app.css"></link>
+
+		<base href="/cdn/projects/rcf-sandbox/1.0.0/" />
+	</head>
+
+	<body>
+		<div id="rcfContainer">
+			<!-- container for a list of activities -->
+			<div id="activities-container">
+				<h1 class="title">Activities</h1>
+				<div id="activities">
+					<!--
+						output the activities from the manifest.json here
+
+						we want to have a clickable link for each activity that will
+						load the activity into the activity-container.
+					-->
+				</div>
+			</div>
+
+			<!-- the activity itself - should populate the 'activity-contents' div when an activity is clicked -->
+			<div id="activity-container">
+				<h1 class="title">Activity</h1>
+				<button id="showAnswersButton" disabled>Show answers</button></span>
+				<div id="activity-contents">
+					<!--
+						output contents of activity html in here
+
+						Then call the RCF.Application.updateContent() function, passing in the <div id="activity-contents"> element
+
+					-->
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<!-- load jquery - necessary for RCF -->
+	<script src="/cdn/rcf/2.1.64/jslibs/jquery-1.11.1.min.js"></script>
+
+	<!-- load RCF Runtime library -->
+	<script src="/cdn/rcf/2.1.64/js/rcf.min.js"></script>
+
+	<!-- load app javascript -->
+	<script type="module" src="/js/app.js"></script>
+
+</html>

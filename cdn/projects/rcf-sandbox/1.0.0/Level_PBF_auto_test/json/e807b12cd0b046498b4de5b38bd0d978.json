@@ -1,0 +1,20 @@
+{
+  "id": "e807b12cd0b046498b4de5b38bd0d978",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "typein_2",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "Dublin Castle"
+    },
+    {
+      "elm": "typein_3",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "loves"
+    }
+  ]
+}

@@ -1,0 +1,6428 @@
+/* ^(?!(\.|\t|\}|\/|\n)) */
+/***** ERIC MEYER CSS RESET  *****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END OF ERIC MEYER CSS RESET */
+/*html {overflow-y: scroll;}*/ /*Removed by request of Peter Willert*/
+
+
+/************************** BASE **************************/
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes link highlight */
+	-webkit-user-select: none; /* prevent copy paste and annoying ios magnifier */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none; /* prevent link popup options */
+	-webkit-text-size-adjust: none; /* This stops the iPhone from automatically changing the size of the text when you flip the phone */
+	outline: none;
+	background-repeat: no-repeat;
+}
+
+.desktop .mobile {
+    display: none;
+}
+.mobile .desktop {
+    display: none;
+}
+
+input.text, textarea {
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+input {
+	margin: 0;
+	padding: 0;
+}
+select {
+	font-size: 1em;
+}
+body, input.text, select, textarea, input.typeinGroup {
+	font-family: Helvetica, Arial, sans-serif;
+}
+body {
+	background-color: #ddd;
+	font-size: 14px;
+	line-height: 1.75em;
+}
+textarea {
+	font-size: 1em;
+}
+
+/* BASIC FORMATTING */
+b, strong {
+	font-weight: bold;
+}
+i, em {
+	font-style: italic;
+}
+.underline {
+	text-decoration: underline;
+}
+sup {
+	font-size: 0.8em;
+	position: relative;
+	bottom: 8px;
+}
+sub {
+	font-size: 0.8em;
+	position: relative;
+	top:8px;
+}
+
+/* IMAGES */
+img {
+	max-width: 100%;
+	display: block;
+	margin-bottom: 0.875em;
+	vertical-align: bottom; /*Without this, inline images display a space below the baseline, used by decenders like q, p, y, etc*/
+}
+.blockSet .block img {
+	margin-right: 0;
+	line-height: 1em;
+	margin-bottom: 0.875em;
+}
+p img, li img, td img, h1 img, h2 img, h3 img {
+	vertical-align: middle;
+	display: inline;
+	margin: 0;
+}
+
+/* LINKS */
+a {
+	color: #274175;
+}
+a.popupLink {
+	color: #83A0B0;
+	text-decoration: none;
+	border-bottom: 1px solid #999;
+	position: relative;
+}
+a.popupLink:hover {
+	background-color: #ddd;
+}
+
+/* HEADINGS */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 24px;
+	line-height: 1em;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1em;
+	margin-bottom: 12px;
+}
+h3 {
+	font-size: 1em;
+	line-height: 1.75em;
+	font-weight: bold;
+	margin-bottom: 0.875em;
+}
+p {
+	margin-bottom: 0.875em;
+}
+.infoBlock p {
+	margin-bottom: 0.875em;
+}
+.rubric p {
+	margin-bottom: 0;
+}
+
+/* TABLES */
+table {
+	margin-bottom: 1.75em;
+}
+td, th {
+	border: 1px solid #FFF;
+	padding: 0.7em 0.875em;
+	text-align: left;
+	vertical-align: top;
+}
+tr.even td {
+	background-color: #eee;
+}
+tr.odd td {
+	background-color: #e3e3e3;
+}
+th {
+	font-weight: bold;
+	background-color: #000;
+	color: #FFF;
+	padding: 0.4em 0.875em;
+}
+table.mm_fullWidth {
+	width: 100%;
+}
+
+/* LISTS */
+.content ul, .content ol {
+	margin-bottom: 1em;
+}
+.content ul ul,.content ol ul,.content ol ol,.content ul ol {
+	margin-bottom: 0;
+}
+.main ul, .infoBlock ul, .rubric ul, .main ol, .infoBlock ol, .rubric ol {
+	padding-left: 1.5em;
+}
+.main ul li ul, .main ul li ol, .main ol li ul, .main ol li ol {
+	padding-left: 2em;
+}
+ul.plain {
+	padding-left: 0;
+}
+ul.plain > li {
+	list-style-type: none;
+}
+ul.bullet > li {
+	list-style-type: square;
+}
+ol.numbered > li {
+	list-style-type: decimal;
+	margin-bottom: 0.875em;
+}
+ol.numbered > li:last-child,
+ol.numbered > li ul.plain > li,
+ol.numbered > li ul.bullet > li,
+ol.numbered > li ol.alpha > li {
+	margin-bottom: 0;
+}
+ol.numbered.checkboxList > li,
+ol.numbered.radioList > li {
+	margin-bottom: 0;
+}
+ol.alpha > li {
+	list-style-type: lower-alpha;
+}
+ol.roman > li {
+	list-style-type: lower-roman;
+}
+ul.horizontal,
+ol.horizontal {
+	padding-left: 0;
+}
+ul.horizontal > li,
+ol.horizontal > li {
+	display: inline;
+	margin-right: 1em;
+}
+ul.horizontal > li:last-child,
+ol.horizontal > li:last-child {
+	margin-right: 0;
+}
+
+ol > li.unnumbered {
+	list-style-type: none;
+}
+
+li p {
+	margin-bottom: 0;
+}
+.rubric ol > li, .rubric ul > li {
+	margin-bottom: 0;
+}
+.rubric ol, .rubric ul {
+	margin-bottom: 0;
+}
+
+.main ul.canDoList {
+	padding-left: 0;
+}
+
+
+/************************** LAYOUT **************************/
+
+.learningObjectHeadAndContent  {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+/* SECTION */
+.sectionHead {
+	margin-bottom: 0.875em;
+}
+
+/* ACTIVITY AND INFOBLOCK */
+
+.content > .infoBlockContainer > .infoBlock {
+	border: 1px solid #000;
+	padding: 0.875em;
+}
+
+
+.activity {
+	background-color: #FFF;
+	border: 1px solid #000;
+	padding: 0.875em;
+	background-repeat: no-repeat;
+	background-position: bottom right ;
+	clear: both;
+}
+.activityContainer {
+	margin-bottom: 3.5em;
+	color: #000;
+}
+
+/* overall score / open-gradable activities only */
+
+.activity .overallScore {
+	display: none;
+}
+
+.activity.reviewTeacherFeedback .overallScore {
+	display: block;
+    margin-top: 10px;
+}
+
+.activity .overallScore > p > [class*='score'] {
+	display: block;
+	padding: 5px;
+}
+
+.activity .overallScore .scoreLabel {
+	background-color: #20a9c4;
+}
+
+.activity .overallScore .score {
+	background-color: #eee;
+}
+
+
+.block .lastChild, .rubric .lastChild, .infoBlock .lastChild {
+	margin-bottom: 0;
+}
+.activityHead {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 0.375em;
+}
+
+.rubricContainer {
+	position: relative;
+}
+
+.rubric {
+	background-color: #f8f8f8;
+	color: #000;
+	border: 1px solid #333;
+	padding: 0.875em;
+}
+.actNum {
+	float: left;
+	margin-right: 1em;
+}
+.rubricBody {
+	display: block;
+}
+.activity.unnumbered .rubricBody {
+	margin-left: 0;
+}
+.main {
+	position: relative;
+	padding: 0.875em 0;
+}
+.unmarked .main {
+	padding-bottom: 0;
+}
+.main .infoBlock {
+	margin-bottom: 0.875em;
+}
+.activity div.lastChild {
+	margin-bottom: 0;
+}
+.block {
+	margin-bottom: 0.875em;
+}
+.interactiveText {
+	margin-bottom: 0.875em;
+}
+.blockSet > .block {
+	padding: 0.875em;
+	border: 1px solid #333;
+	text-align: left;
+}
+.main div.lastChild {
+	margin-bottom: 0;
+}
+.clear {
+	clear: both;
+}
+
+/* MARKS */
+.markable {
+	position: relative;
+}
+.mark {
+	display: none;
+	height: 16px;
+	width: 16px;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 10;
+	right: -1em;
+	bottom: 0.3em;
+}
+.mark.wrong, .mark.correct {
+	display: inline;
+}
+.typein .mark {
+	top: -0.6em;
+	right: -0.3em;
+}
+.dropDown .mark {
+	top: -0.6em;
+	right: -0.3em;
+}
+/*
+.selectable .mark {
+	top: -0.4em;
+	right: -0.5em;
+}*/
+.interactiveText .selectableMarkContainer {
+	position: relative;
+}
+.selectableMarkContainer .mark {
+	position: absolute;
+	left: -10px;
+}
+.category .mark {
+	right: -1.5em;
+}
+.droppable .mark {
+	top: -0.6em;
+	right: -0.3em;
+}
+.correct {
+	background-image: url(../images/tick.png);
+}
+.wrong {
+	background-image: url(../images/cross.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.correct {
+		background-image: url(../images/tick@2x.png);
+		background-size: 16px;
+	}
+	.wrong {
+		background-image: url(../images/cross@2x.png);
+		background-size: 16px;
+	}
+}
+
+
+/************************** MODULE **************************/
+
+/*** MARKED COMPONENENTS ***/
+
+.example, .mm_example {
+	font-style: italic;
+	color: #666;
+}
+select.example {
+	font-style: normal;
+}
+input.text.example, .dragTarget.example, .mm_example {
+	border-color: #ccc;
+	color: #666;
+}
+input.text.example, .typeinGroup input.typeinGroup.example {
+	border: 1px solid #ccc;
+	color: #666;
+}
+.dropTarget .example {
+	border: 0;
+	background: 0;
+}
+
+/* DROPPABLE */
+.wordBox {
+	background-color: #f8f8f8;
+	border: 1px solid #333;
+	margin-bottom: 0.875em;
+	padding: 0.5em;
+	padding-bottom: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.wordBox.dragOverDrop {
+	background-color: #ccc;
+}
+.wordBox ul {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.wordBox li.dragItem {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	vertical-align: top;
+	border: 1px solid #333;
+	background-color: #FFF;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+	line-height: 1.5em;
+	color: #000;
+	-webkit-transition: 0.2s opacity;
+	-moz-transition: 0.2s opacity;
+	-ms-transition: 0.2s opacity;
+	-o-transition: 0.2s opacity;
+	transition: 0.2s opacity;
+	opacity:1;
+}
+
+.category li.dragItem.dragged, .category li.dragged {
+    opacity: 0.3;
+}
+
+.wordBox li.dragItem.dragged {
+	visibility: hidden;
+}
+
+
+.dragTarget {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	min-width: 6em;
+	line-height: 1.5em; /*Set to the text size*/
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	cursor: pointer;
+	border: 1px solid #333;
+	background-color: #f8f8f8;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	position: relative; /* fix for chrome rendering bug ! */
+	color: #000;
+}
+td .dragTarget {
+	width: 90%;
+}
+/* THESE VALUES NEED TO BE ADJUSTED ON BOTH CORE AND 768 STYLESHEETS DEPENDENT ON TEXT SIZE */
+.dragTarget, .categorise .dragItem {
+	min-height: 21px;
+	line-height: 1.5em;
+}
+.dragTarget {
+	vertical-align: -7px;
+	transition: background 300ms;
+	-moz-transition: background 300ms;
+	-webkit-transition: background 300ms;
+}
+.dragTarget.populated {
+	vertical-align: baseline;
+}
+.dragTarget.inline.populated {
+	display: inline;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	/* Top and bottom values are different because we are tyring to match the 21px total height (14px x 1.5em)*/
+}
+td .dragTarget.inline.populated, .blockSet .block .dragTarget.inline.populated {
+	display: inline-block;
+	padding-top: 0;
+	padding-bottom: 0;
+	/*In the core stylesheet, we are making the inline dragTargets inline-block to avoid the 'wrapping' effect. Not totally sure that this is a good idea, but it seems to have the desired effect*/
+}
+.dragTarget, .wordBox li.dragItem {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+/* ====================== */
+
+/* Mobile Tap and drop Selected */
+li.dragItem.selected, .dragTarget.selected, .wordBox li.dragItem.selected {
+	background-color: #333;
+	color: #FFF;
+}
+
+/* Desktop Item while dragged */
+li.dragItem.ui-draggable-dragging, ul.ordering li.ui-sortable-helper {
+	z-index: 1000;
+	background-color: #FFF;
+	-webkit-box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.75);
+	box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.75);
+}
+/* Desktop target 'activated' */
+.dragTarget.dragOverDrop {
+	background-color: #333;
+	color: #FFF;
+}
+/* Desktop droppable 'activated' */
+li.dragItem.ui-draggable-dragging.dragOverDrop {
+	background-color: #FFF;
+	color: #333;
+	border: 1px dashed #333;
+}
+/* IMAGE DRAGGING */
+
+
+.blockSet .block .dragImageTarget img {
+	margin: 0;
+}
+.dragImageItem, .wordBox li.dragImageItem, .dragImageTarget, .category li.dragImageItem {
+	border-color: #000;
+	padding: 2px;
+	width: 50px;
+	height: 50px;
+}
+.dragImageItem img, .wordBox li.dragImageItem img, .dragImageTarget img {
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.markable.droppableImage {
+	display: inline-block;
+}
+
+.dragTarget.inline.populated.dragImageTarget {
+	display: block;
+}
+.dragImageItem .caption, .dragImageTarget .caption {
+	text-align: center;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+/* DROPDOWN */
+
+.content select {
+	font-size: 1em;
+	cursor: pointer;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+/* dropdown itemSelect styles */
+.ui-selectmenu-button {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+	padding: 0.5em;
+	white-space: nowrap;
+	display: inline-block;
+}
+.ui-selectmenu-button.ui-selectmenu-button-open {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.ui-selectmenu-button .ui-selectmenu-icon {
+    position: absolute;
+    right: 4px;
+    top: 0.5em;
+    height: 22px;
+    width: 22px;
+    color: #000;
+	background-image: url(../images/blendedFlashcards_nav_next.svg);
+    background-size: 12px 12px;
+    background-position: center;
+    transform: rotate(90deg);
+}
+.ui-selectmenu-button.ui-selectmenu-button-open .ui-selectmenu-icon {
+    transform: rotate(-90deg);
+}
+.ui-selectmenu-button .ui-selectmenu-text {
+    padding-right: 1.5em;
+}
+.ui-selectmenu-menu {
+    display: none;
+}
+.ui-selectmenu-menu.ui-selectmenu-open {
+    display: inline-block;
+    z-index: 250;
+}
+.ui-selectmenu-menu .ui-menu {
+    border: 1px solid #000;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #fff;
+}
+.ui-selectmenu-menu .ui-menu-item-wrapper {
+    padding: 0.5em;
+}
+.ui-selectmenu-menu .ui-menu-item:not(:last-child) .ui-menu-item-wrapper {
+    border-bottom: 1px solid #000;
+}
+.ui-selectmenu-menu .ui-menu-item-wrapper.ui-state-active {
+    background-color: #000;
+    color: #fff;
+}
+/* dropdown itemSelect example styles */
+.example .ui-selectmenu-button {
+    color: #666;
+    border-color: #666;
+}
+/* dropdown itemSelect disabled styles */
+.ui-selectmenu-button.ui-state-disabled,
+.example .ui-selectmenu-button.ui-state-disabled {
+    color: #aaa;
+    border-color: #aaa;
+}
+.ui-selectmenu-button.ui-state-disabled .ui-selectmenu-icon {
+    opacity: 0.5;
+}
+
+
+
+/* TYPEIN */
+
+.typein {
+	white-space: nowrap;
+}
+.typein .hintText {
+	white-space: normal;
+}
+
+span.markedTextInput.offscreenInput, input.text {
+	-webkit-user-select: text; /* allow text input on iOS */
+	color: #111;
+	font-size: 1em;
+	border: 1px solid #333;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 1.5em;
+	height: 1.5em; /* Hack for firefox - http://stackoverflow.com/questions/10274016/firefox-bug-with-input-line-height-any-work-around */
+	background-color: #f8f8f8;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 1px 1px 2px #999;
+	-webkit-box-shadow: inset 1px 1px 2px #999;
+	box-shadow: inset 1px 1px 2px #999;
+
+}
+
+span.markedTextInput.offscreenInput {
+	position: absolute;
+	left: -3000px;
+	top: -2000px;
+	width: auto;
+	display: inline-block;
+}
+
+table input.text.unmarkedText, li input.text.unmarkedText {
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+}
+table textarea {
+	margin-bottom: 0;
+}
+.submitButton {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+}
+.hintText {
+	font-weight: bold;
+	font-style: italic;
+}
+input.checkbox, input.radio {
+	margin-right: 0.8em;
+}
+.checkBoxTable input.checkbox, .radioTable input.radio {
+	margin-right: 0;
+}
+
+textarea.rcfTextArea {
+	-webkit-user-select: text; /* allow text input on iOS */
+	width: 100%;
+	padding: 5px;
+	background-color: #f8f8f8;
+	border: 1px solid #333;
+	font-size: 0.9em;
+	resize: none;
+	display: block;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow:    inset 1px 1px 2px #999;
+	-webkit-box-shadow: inset 1px 1px 2px #999;
+	box-shadow:         inset 1px 1px 2px #999;
+	margin-top: 0;
+	margin-bottom: 0.875em;
+}
+textarea.mlTypein {
+	height: 1em; /* Required to set the default textarea size for the autoexpander functionality */
+}
+li textarea.mlTypein {
+	min-height: 20px;
+}
+.mlTypein textarea.example {
+	border: 1px solid #aaa;
+}
+
+/* TYPEIN GROUP */
+.typeinGroup {
+	letter-spacing: 0.2em;
+}
+.typeinGroup {
+	word-spacing: 1em;
+
+}
+.typeinGroup input.typeinGroup {
+	border: 1px solid #000;
+	padding: 0.15em 0;
+	font-size: 1em;
+	margin-right: 0.2em;
+	-webkit-user-select: text; /* allow text input on iOS */
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0;
+	background-color: #f8f8f8;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 1px 1px 2px #999;
+	-webkit-box-shadow: inset 1px 1px 2px #999;
+	box-shadow: inset 1px 1px 2px #999;
+}
+
+
+/* POPUP MASK - used to catch clicks to hide any popups
+	- fills the entire .activityContainer */
+.rcfMask {
+	position: absolute;
+	z-index: 9011;
+	display: none;
+	opacity: 0.4;
+	background: #666;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.rcfInteractiveMask.show {
+	position:absolute;
+	z-index:9012;
+	display:block;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
+.activityContainer .activity.tr_hideMask1 + .activity .triggerMask {
+	display: none;
+}
+/* LOCATING and SELECTCAT */
+
+.locating {
+	vertical-align: bottom; /* Fixes a really odd bug where the locating answer would not appear when the locating item was the last word in a line. No idea what is happening here, but this seems to work in Chrome */
+	position: relative;
+}
+.interactiveText  .eSpan {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s linear, opacity 0.2s linear, background-color 0.2s linear
+}
+.interactiveText  .eDiv {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0.2s linear, opacity 0.2s linear, background-color 0.2s linear;
+	-webkit-transition: color 0.5s, -webkit-filter 0.5s ;
+}
+
+.locatingItem, .eSpan.selectableCat {
+	padding: 0.35em 0;
+	position: relative;
+}
+
+.locating .markable, .eSpan.selectableCat .markable {
+	white-space: normal;
+	display: inline;
+}
+.locatingSelecting, .eSpan.selectableCat.selecting {
+	background-color: #d5dde7;
+}
+
+.locating_popup {
+	position: absolute;
+}
+
+.locating_popup, .reviewPopupPrompt, .interactiveText_popup {
+	display: none;
+	position: absolute;
+	background-color: #FFF;
+	z-index: 10001;
+	padding: 0;
+	max-width: 250px;
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+	bottom: 1.5em;
+	min-width: 100px;
+}
+
+.locating_popup.dropDown span, .interactiveText_popup span {
+	display: block;
+	padding: 0.5em 1em;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+	line-height: 1.5em;
+}
+
+.reviewPopupPrompt div {
+	padding: 0.5em 1;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+	line-height: 1.5em;
+}
+
+.locating_popup.typein input {
+	display: block;
+}
+.locating_popup span:active, .interactiveText_popup span:active, .reviewPopupPrompt span:active {
+	background-color: #ccc;
+}
+.locating_popup span.lastChild, .interactiveText_popup span.lastChild, .reviewPopupPrompt span.lastChild {
+	border-bottom: none;
+}
+
+.locating .answered, .eSpan.selectableCat.answered {
+	background-color: #d5dde7;
+}
+
+.locating_answer, .eSpan.selectableCat .answer {
+	display: none;
+	color: #5d09cf;
+	background-color: #d5dde7;
+	padding: 0.35em 0;
+	padding-left: 0;
+}
+.eSpan.selectableCat.cat_1 .answer {
+	color: #0000FF;
+}
+.eSpan.selectableCat.cat_2 .answer {
+	color: #008000;
+}
+.eSpan.selectableCat.cat_3 .answer {
+	color: #FF00FF;
+}
+.eSpan.selectableCat.cat_4 .answer {
+	color: #FFA500;
+}
+.eSpan.selectableCat.cat_5 .answer {
+	color: #800080;
+}
+.eSpan.selectableCat.cat_6 .answer {
+	color: #A52A2A;
+}
+.locating_popup.typein .locating_typein_container {
+	display: inline-block;
+	padding: 1em;
+}
+.reviewPopupPrompt .reviewTypeinContainer {
+	padding: 1em;
+}
+
+.reviewPopupPrompt .reviewTypeinContainer textarea {
+	resize: none;
+	border: 1px solid #aaa;
+	box-sizing: border-box;
+	height: 4.2em;
+	line-height:1.2em;
+	padding: 0.5em;
+}
+.locating_popup input, .reviewPopupPrompt input {
+	margin-bottom: 1em;
+}
+.locating_popup .textControls, .reviewPopupPrompt .textControls {
+	padding: 0;
+	margin-bottom: 0;
+}
+.locating_popup.typein span:active, .reviewPopupPrompt span:active {
+	background-color: inherit;
+}
+
+.locating_popup, .interactiveText_popup, .reviewPopupPrompt {
+	position: absolute;
+	display: none;
+	bottom: auto;
+}
+
+.locating_popup .locatingSpanPopup.clear {
+	display: none;
+}
+
+.locating_popup.withAnswer .locatingSpanPopup.clear {
+	display: block;
+}
+
+.leavingInlineComment .reviewPopupPrompt {
+	display: block;
+}
+
+/* INTERACTIVE TEXT */
+
+.selectable {
+	cursor: pointer;
+}
+.interactiveText .selectable {
+	cursor: auto;
+}
+.interactiveText.type_selectableWords .selectable {
+	cursor: pointer;
+}
+
+.selected {
+	background-color: #333;
+	color: #FFF;
+}
+.selected.example {
+	background-color: #aaa;
+	color: #FFF;
+}
+.toggle {
+	cursor: pointer;
+}
+.mm_strikethrough .toggleState2 {
+	text-decoration: line-through;
+}
+.mm_strikethrough .mm_example {
+	color: #666;
+	text-decoration: line-through;
+}
+.itMain {
+	margin-bottom: 0;
+}
+
+.interactiveText .eSpan.hidden,
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+.blurred {
+	-moz-filter: blur(3px);
+	-ms-filter: blur(3px);
+	-o-filter: blur(3px);
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+	opacity: 0.6;
+}
+.chaseWord {
+	transition: color 0.5s, filter 0.5s;
+	-webkit-transition: color 0.5s, -webkit-filter 0.5s ;
+}
+.chaseCountDown {
+	float: right;
+}
+.chaseFade {
+	color: transparent;
+}
+.chaseBlurred {
+	-moz-filter: blur(3px);
+	-ms-filter: blur(3px);
+	-o-filter: blur(3px);
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+	opacity: 0.6;
+}
+.beforeChase {
+	background-color: #eee;
+	color: #eee;
+}
+.chaseHighlight {
+	background-color: #ddd;
+}
+.highlight.cat_1 {
+	background-color: #FFF44c;
+}
+.highlight.cat_2 {
+	background-color: #9cffaa;
+}
+.highlight.cat_3 {
+	background-color: #9cfcff;
+}
+.highlight.cat_4 {
+	background-color: #ff9cfe;
+}
+
+.interactiveText[data-marktype=list] .itMain > .selectableMarkContainer {
+	float: right;
+}
+
+.interactiveText.type_selectable .markable .selectable,
+.interactiveText.type_selectableWords .markable .selectable,
+.interactiveText.type_selectableCat .selectableCatItem,
+.interactiveText.type_selectableCat .markable .answer,
+.locating .markable .locating_answer .contentLocatingAnswer {
+    position: relative;
+}
+
+/* CATEGORISE */
+
+.categorise table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+.categorise.hybrid .categories, 
+.categorise.draggable .categories, .categorise.touchable .categories {
+	text-align: center;
+}
+
+.category {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	border: 1px solid #000;
+	vertical-align: top;
+	text-align: center;
+}
+.categories1 .category {
+	width: 40%;
+}
+.categories2 .category {
+	width: 48%;
+}
+.categories3 .category {
+	width: 32%;
+}
+.categories4 .category {
+	width: 23%;
+}
+.categories5 .category {
+	width: 19%;
+}
+.categories6 .category {
+	width: 15%;
+}
+.mobileCategoryContainer {
+	margin-bottom: 1em;
+	clear: both;
+}
+.mobileCategoryContainer .category {
+	width: 49%;
+}
+.mobileCategoryContainer .leftCategory {
+	float: left;
+}
+.mobileCategoryContainer .rightCategory {
+	float: right;
+}
+.category h3 {
+	background-color: #000;
+	color: #FFF;
+	text-align: center;
+	margin-bottom: 0;
+	padding: 0.4em;
+}
+.category .dropTarget {
+	min-height: 150px;
+	padding: 0.4em 0;
+	padding-bottom: 0;
+	background-color: #eee;
+}
+.category .dropTarget.dragOverDrop {
+	background-color: #ccc;
+}
+.category .dropTarget ul {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.category li {
+	border: 1px solid #333;
+	list-style-type: none;
+	margin-bottom: 0.4em;
+	cursor: pointer;
+	background-color: #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	line-height: 1em;
+	display: inline-block;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+.categorise .dragItem {
+	display: inline-block;
+}
+
+.categorise .clear {
+	clear: both;
+}
+.categorise td {
+	text-align: center;
+	vertical-align: middle;
+}
+.categorise th {
+	text-align: center;
+}
+.categorise td.leftCell {
+	text-align: left;
+}
+.categorise td img, .categorise.radioList img, .categorise.dropDown img {
+	width: 100px;
+	/*test*/
+}
+.categorise ul.radioList {
+	padding-left: 0;
+	display: block;
+}
+.categorise ul.radioList li {
+	margin-bottom: 1em;
+}
+.categorise ul.radioList li:last-child {
+	margin-bottom: 0;
+}
+.categorise ul.radioList ul li {
+	margin-bottom: 0;
+}
+.categorise ul.radioList span.categoriseRadioList {
+	font-weight: normal;
+	margin-bottom: 0.875em;
+	display: block;
+}
+.categorise ul.radioList span.markable {
+	font-weight: normal;
+	display: inline;
+	margin-bottom: 0;
+}
+
+.categorise ul.radioList span.markable label {
+	cursor: pointer;
+	padding-left: 0.5em;
+}
+
+.main .categorise ul.dropDown {
+	padding-left: 0;
+}
+.categorise ul.dropDown li {
+	margin-bottom: 0.5em;
+}
+.categorise.dropDown span.categoryItem {
+	margin-right: 0.5em;
+	min-width: 7em;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.categorise.dropDown span.categoryItem {
+	margin-right: 0.5em;
+}
+.categorise.dropDown span.markable {
+	margin-right: 0;
+}
+.categorise .wordBox li.dragItem {
+	text-align: center;
+}
+
+/* categorise item select list */
+.categoriseItemSelect {
+	display: block;
+}
+.categoriseItemSelect .selectable {
+	padding: 0.5em;
+	border: 1px solid #333;
+	background-color: #FFF;
+	margin-right: 0.475em;
+	margin-bottom: 0.475em;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.categoriseItemSelect .selectable.selected {
+	background-color: #333;
+}
+.example .categoriseItemSelect .selectable {
+	cursor: default;
+}
+
+.complexCategorise .complexCategoriseCheckBoxList label {
+	cursor: pointer;
+	padding-left: 0.5em;
+}
+
+.complexCategorise .itemSelectListItem .selectable.category.example {
+	background: #ddd;
+}
+.complexCategorise .itemSelectListItem .category.selectable.disabled {
+    background: #ddd;
+    color: #333;
+}
+
+
+/* RADIO AND CHECKBOX */
+
+.radio label, .checkbox label {
+	cursor: pointer;
+}
+
+ul ul.radioList.vertical {
+	padding-left: 1.5em;
+}
+ul.radioList.horizontal {
+	display: inline;
+}
+ul.radioList.horizontal, ul.radioList.vertical, ul.checkboxList.horizontal, ul.checkboxList.vertical {
+	padding-left: 0;
+}
+ul.radioList.vertical.alpha, ul.radioList.vertical.numbered, ul.radioList.vertical.bullet {
+	padding-left: 1.5em;
+}
+.checkboxItemSelect.horizontal, .radioItemSelect.horizontal {
+	white-space: nowrap;
+}
+.radioItemSelect, .checkboxItemSelect {
+	margin-bottom: 0.875em;
+	display: block;
+}
+p .radioItemSelect, p .checkboxItemSelect, li .radioItemSelect, li .checkboxItemSelect {
+	margin-bottom: 0;
+}
+p .radioItemSelect .selectable, p .checkboxItemSelect.selectable, li .radioItemSelect .selectable, li .checkboxItemSelect .selectable {
+	padding: 0 0.2em;
+}
+.horizontal .itemSelectContainer {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.radioItemSelect .selectable, .checkboxItemSelect .selectable {
+	padding: 0.5em;
+	border: 1px solid #333;
+	background-color: #FFF;
+}
+.radioItemSelect .selectable.selected, .checkboxItemSelect .selectable.selected {
+	background-color: #333;
+	color: #FFF;
+}
+
+.radioItemSelect .selectable.disabled, .checkboxItemSelect .selectable.disabled {
+	background: #eee;
+}
+.radioItemSelect img, .checkboxItemSelect img {
+	margin-bottom: 0;
+}
+.desktop .radioItemSelect.horizontal .selectable:first-child, .desktop .checkboxItemSelect.horizontal .selectable:first-child {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 1px solid #333;
+}
+.desktop .radioItemSelect.horizontal .selectable:last-child, .desktop .checkboxItemSelect.horizontal .selectable:last-child {
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.radioItemSelect.vertical .selectable:first-child, .checkboxItemSelect.vertical .selectable:first-child, .mobile .radioItemSelect.horizontal .selectable:first-child, .mobile .checkboxItemSelect.horizontal .selectable:first-child {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 1px solid #333;
+}
+.radioItemSelect.vertical .selectable:last-child, .checkboxItemSelect.vertical .selectable:last-child, .mobile .radioItemSelect.horizontal .selectable:last-child, .mobile .checkboxItemSelect.horizontal .selectable:last-child {
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.radioItemSelect.vertical .selectable, .checkboxItemSelect.vertical .selectable, .mobile .radioItemSelect.horizontal .selectable, .mobile .checkboxItemSelect.horizontal .selectable {
+	display: block;
+	border-top: none;
+}
+.desktop .radioItemSelect.horizontal .selectable, .desktop .checkboxItemSelect.horizontal .selectable {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	border-left: none;
+}
+.checkboxList.vertical .checkboxItemContainer, .radioList.vertical .radioItemContainer {
+	display: block;
+	margin-left: 1.75em;
+}
+
+.checkboxList.vertical input, .radioList.vertical input {
+	display: block;
+	*display: inline;
+	float: left;
+	*float:none;
+	position: relative;
+	top: 0.4em; /*If changing, ensure that this is checked cross browser and on mobile and desktop*/
+	*top:0.1em;
+}
+.checkboxList.vertical .markable, .radioList.vertical .markable {
+	display: block;
+}
+.markContext {
+	position: relative;
+}
+
+.checkboxItemSelect[data-markType='list'] {
+	position: relative;
+}
+
+.checkboxItemSelect[data-markType='list'] .mark {
+	position: absolute;
+}
+
+.checkboxList[data-markType='list'] {
+	position: relative;
+}
+.checkboxList[data-markType='list'] .mark {
+	position: absolute;
+}
+
+
+/* ORDERING */
+
+.ordering, .complexOrdering {
+	vertical-align: top;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.main ul.ordering, .main ul.complexOrdering {
+	padding: 0;
+}
+
+ul.ordering li, ul.complexOrdering li {
+	background-color: #FFF;
+	border: 1px solid #333;
+	cursor: pointer;
+	padding: 3px 6px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 0.43em;
+	margin-right: 0.1em;
+}
+
+ul.ordering li.draggablePlaceHolder, ul.complexOrdering li.draggablePlaceHolder {
+	border-color: transparent;
+	background-color: transparent;
+	border: 1px dashed #333;
+}
+.ordering ul.ordering, .complexOrdering ul.complexOrdering {
+	display: block;
+	margin-bottom: 0;
+}
+.ordering.horizontal.perList, .complexOrdering.horizontal.perList {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.ordering.horizontal ul, .complexOrdering.horizontal ul {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.ordering.horizontal ul.ordering li, .complexOrdering.horizontal ul.complexOrdering li {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	white-space: nowrap;
+}
+
+.ordering.desktop .orderingControls, .complexOrdering.desktop .orderingControls, .positioning.desktop .orderingControls {
+	display: none;
+}
+
+.activity[data-mobiledragdrop='y'] .ordering.mobile .orderingControls, 
+.activity[data-mobiledragdrop='y'] .complexOrdering.mobile .orderingControls, 
+.activity[data-mobiledragdrop='y'] .positioning.mobile .orderingControls {
+	display: none;
+}
+
+.activity[data-mobiledragdrop='y'][data-desktopdraggable='n'] .ordering.desktop .orderingControls, 
+.activity[data-mobiledragdrop='y'][data-desktopdraggable='n'] .ordering.mobileOverride .orderingControls, 
+.activity[data-mobiledragdrop='y'][data-desktopdraggable='n'] .complexOrdering.desktop .orderingControls, 
+.activity[data-mobiledragdrop='y'][data-desktopdraggable='n'] .complexOrdering.mobileOverride .orderingControls, 
+.activity[data-mobiledragdrop='y'][data-desktopdraggable='n'] .positioning.desktop .orderingControls,
+.activity[data-mobiledragdrop='y'][data-desktopdraggable='n'] .positioning.mobileOverride .orderingControls {
+	display: block;
+}
+
+
+.ordering.mobile-vertical.perList, .complexOrdering.mobile-vertical.perList {
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.ordering.mobile-vertical .orderingControls, .complexOrdering.mobile-vertical .orderingControls {
+	float: right;
+}
+.ordering.mobile-horizontal .orderingControls, .complexOrdering.mobile-horizontal .orderingControls {
+	display: block;
+}
+
+.ordering.horizontal.desktop .orderingControls, .complexOrdering.horizontal.desktop .orderingControls {
+	display: none;
+}
+.ordering.horizontal.mobile-vertical.mobile ul.ordering li, .complexOrdering.horizontal.mobile-vertical ul.complexOrdering li {
+	display: block;
+	zoom: 1;
+	*display: inline;
+	white-space: nowrap;
+}
+.ordering.mobile-horizontal.mobile {
+	margin-bottom: 0.875em;
+}
+.ordering.mobile-vertical.mobile ul, .ordering.mobile-vertical.mobile ul,.complexOrdering.vertical.mobile ul {
+	margin-right: 50px;
+}
+.ordering.horizontal .orderingControls a.singleButton, .complexOrdering.horizontal .orderingControls a.singleButton {
+	margin-right: 0.5em;
+}
+.ordering.vertical .orderingControls a, .complexOrdering.vertical .orderingControls a {
+	display: block;
+	margin-right: 0;
+	margin-bottom: 0.5em;
+}
+ul.ordering li.selected, ul.complexOrdering li.selected {
+	background-color: #333;
+	color: #FFF;
+	border-color: #333;
+}
+
+ul.ordering.capitalise li:first-child:first-letter {
+	text-transform: capitalize;
+}
+
+ul.ordering.capitalise li:first-child::first-letter {
+	text-transform: capitalize;
+}
+
+ul.ordering.capitalise li:first-child span.markable:first-letter {
+	text-transform: capitalize;
+}
+
+ul.ordering.capitalise li:first-child span.markable::first-letter {
+	text-transform: capitalize;
+}
+
+/* ordering feedback */
+.ordering:not(.example) li.correctPosition {
+	background: #008000;
+}
+.ordering:not(.example) li.incorrectPosition {
+	background: #FF0000;
+}
+
+.orderingControls a {
+	padding: 0;
+	width: 39px;
+	height: 39px;
+}
+.orderingControls a span {
+	width: 39px;
+	height: 39px;
+	padding: 0;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.orderingControls a span {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.orderingDownControl span {
+	background-image: url(../images/down_arrow.png);
+}
+.orderingUpControl span {
+	background-image: url(../images/up_arrow.png);
+}
+.ordering.mobile-horizontal .orderingUpControl span {
+	background-image: url(../images/left_arrow.png);
+}
+.ordering.mobile-horizontal .orderingDownControl span {
+	background-image: url(../images/right_arrow.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.orderingControls a span {
+		background-size: 24px;
+	}
+	.orderingDownControl span {
+		background-image: url(../images/down_arrow@2x.png);
+	}
+	.orderingUpControl span {
+		background-image: url(../images/up_arrow@2x.png);
+	}
+	.ordering.mobile-horizontal .orderingUpControl span {
+		background-image: url(../images/left_arrow@2x.png);
+	}
+	.ordering.mobile-horizontal .orderingDownControl span {
+		background-image: url(../images/right_arrow@2x.png);
+	}
+}
+.ordering.perItem.vertical .mark, .complexOrdering.perItem.vertical .mark {
+	right: -1.5em;
+	top: 0.1em;
+}
+.ordering.perList.vertical .mark, .complexOrdering.perList.vertical .mark {
+	right: -0.2em;
+	bottom: 1em;
+}
+.ordering.mobile.perList.vertical .mark, .complexOrdering.mobile.perList.vertical .mark {
+	right: 45px; /*px because the sortControls width is fixed across all sizes*/
+}
+.ordering.perItem.horizontal .mark, .complexOrdering.perItem.horizontal .mark {
+	bottom: 1.2em;
+	right: -0.6em;
+	top: auto;
+}
+.ordering.perList.horizontal .mark, .complexOrdering.perList.horizontal .mark {
+	top: 0.4em;
+	right: -1.3em;
+}
+ul.ordering.example li, ul.complexOrdering.example li {
+	border-color: #999;
+}
+ul.ordering li.fixed, ul.complexOrdering li.fixed {
+	background-color: transparent;
+	border-color: transparent;
+	cursor: default;
+}
+
+/* SENTENCE BUILDER + wordInswrt */
+.sentenceBuilderContainer {
+	position: relative;
+}
+
+.sentenceBuilder {
+	border: 1px dashed #000;
+    border-radius: 5px;
+    padding: .875em;
+}
+
+.sentenceBuilder ul {
+    padding: 0;
+	margin: 0;
+	min-height: 40px;
+}
+.sentenceBuilder ul li.dev-placeholder {
+	visibility: hidden;
+}
+.sentenceBuilder ul li {
+    display: inline-block;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    vertical-align: top;
+}
+.sentenceBuilder ul li.dragItem {
+    border: 1px solid #333;
+    background-color: #FFF;
+    margin-right: 0.5em;
+    cursor: pointer;
+    line-height: 1.5em;
+    color: #000;
+    transition: 0.2s opacity;
+    opacity:1;
+    border-radius: 5px;
+}
+.sentenceBuilder ul li.prefix, 
+.sentenceBuilder ul li.suffix {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+}
+.sentenceBuilder .draggablePlaceHolder {
+	outline: 3px dashed #bbb;
+	border: none;
+	background: #eee;
+	margin-right: 0.5em;
+}
+
+.itemWordInsertSentenceBuilder ul.sentenceWordList.capitalise li:first-child:first-letter, 
+.itemWordInsertSentenceBuilder ul.sentenceWordList.capitalise li:first-child::first-letter {
+	text-transform: capitalize;
+}
+
+.wordInsertSentenceBuilder ul.sentenceWordList.capitalise li:first-child:first-letter, 
+.wordInsertSentenceBuilder ul.sentenceWordList.capitalise li:first-child::first-letter {
+	text-transform: capitalize;
+}
+
+.sentenceBuilder ul.sentenceWordList.capitalise li:first-child:not(.fixed):first-letter, 
+.sentenceBuilder ul.sentenceWordList.capitalise li.prefix:first-letter {
+	text-transform: capitalize;
+}
+
+.sentenceBuilder ul.sentenceWordList.capitalise li:first-child:not(.fixed)::first-letter,
+.sentenceBuilder ul.sentenceWordList.capitalise li.prefix::first-letter {
+	text-transform: capitalize;
+}
+
+.sentenceBuilder li.dragItem.fixed,
+.wordInsertSentenceBuilder li.dragItem.fixed,
+.itemWordInsertSentenceBuilder li.dragItem.fixed {
+    cursor: default;
+    background: #eee;
+    border-color: transparent;
+}
+
+/* WORDSNAKE */
+.wordSnakeContainer {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.mobile .wordSnakeContainer {
+	-webkit-touch-callout: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+}
+.mobile .wordSnake[selecting='y'] .letter:not(.rangeMade):not(.example):not(.ui-selecting) {
+	background-color: #FFD700;
+}
+.wordSnakeContainer .wordSnake {
+	list-style-type: none;
+}
+.wordSnakeContainer .wordSnake li.letter {
+	border: 1px solid #ddd;
+	padding: 15px;
+	float: left;
+	line-height: 1em;
+	margin: 3px;
+}
+.wordSnake .rangeMade {
+	color: #FFF;
+}
+.wordSnake .highlight0 {
+	background-color: #FF0000;
+}
+.wordSnake .highlight1 {
+	background-color: #008000;
+}
+.wordSnake .highlight2 {
+	background-color: #0000FF;
+}
+.wordSnake .highlight3 {
+	background-color: #800080;
+}
+.wordSnake .highlight4 {
+	background-color: #FFA500;
+}
+.wordSnake .ui-selecting {
+	background-color: #FFFF00;
+	color: #000;
+}
+.wordSnake .range-selecting {
+	background-color: #FFFF00;
+}
+.wordSnake .example {
+	background-color: #bbb;
+	color: #000;
+}
+.wordSnake li.letter .markContext {
+	top: -15px;
+}
+
+
+/* WORDSEARCH TABLE */
+.rcfWordSearchGrid {
+
+}
+.rcfTableGrid {
+	margin: 0 auto 25px;
+}
+.rcfWordSearchGrid table td {
+	background-color: #FFF;
+	border: 1px solid #bbb;
+	cursor: pointer;
+}
+.rcfWordSearchGrid table {
+	/*width: 100%;*/
+}
+.rcfWordSearchGrid table td {
+	padding: 0;
+	text-align: center;
+	font-size: 0.9em;
+	height:30px;
+	width: 30px;
+}
+
+.rcfWordSearchGrid td.showAnswer {
+	color: #FFF;
+}
+
+.rcfWordSearchGrid table td.word0.showAnswer {
+	background-color: #111;
+}
+.rcfWordSearchGrid table td.word1.showAnswer {
+	background-color: #222;
+}
+
+.rcfWordSearchGrid table td.word2.showAnswer {
+	background-color: #333;
+}
+
+.rcfWordSearchGrid table td.word3.showAnswer {
+	background-color: #444;
+}
+
+.rcfWordSearchGrid table td.word4.showAnswer {
+	background-color: #555;
+}
+
+.rcfWordSearchGrid table td.word5.showAnswer {
+	background-color: #666;
+}
+
+.rcfWordSearchGrid table td.word6.showAnswer {
+	background-color: #777;
+}
+
+.rcfWordSearchGrid table td.word7.showAnswer {
+	background-color: #888;
+}
+
+.rcfWordSearchGrid table td.word8.showAnswer {
+	background-color: #999;
+}
+
+.rcfWordSearchGrid table td.word9.showAnswer {
+	background-color: #aaa;
+}
+
+.rcfWordSearchGrid table td.word10.showAnswer {
+	background-color: #bbb;
+}
+
+.rcfWordSearchGrid.tooSmall {
+	border: 2px solid #FF0000;
+}
+
+
+.rcfWordSearchGrid .ws-highlight,
+.rcfWordSearchGrid .ws-selected,
+.mobile .rcfWordSearchGrid .ws-start,
+.wordSearchContainer[data-draggable='n'] .rcfWordSearchGrid .ws-start,
+.rcfWordSearchGrid .ws-glowing {
+	background-color: #FFD700;
+
+}
+
+.rcfWordSearchGridChosenWords {
+	/*position:relative;*/
+}
+
+.rcfWordSearchGridChosenWords .wordSearchWords {
+	min-height: 2em;
+	line-height: 2em;
+	padding:8px;
+	background-color: #f8f8f8;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rcfWordSearchGrid td.example {
+	background: #333;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.wordSearchWords:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.rcfWordSearchGridChosenWords .wordSearchWords li {
+	float: left;
+	list-style: none;
+}
+.rcfWordSearchGridChosenWords .wordSearchWords li .wordSearchSelection {
+	-webkit-border-radius:  5px;
+	-moz-border-radius:  5px;
+	border-radius: 5px;
+	position:relative;
+	margin: 3px 20px 3px 5px;
+	border: 1px solid #aaa;
+	background-color: #e4e4e4;
+	line-height: 1em;
+	padding: 3px 10px 3px 5px;
+	cursor: pointer;
+}
+
+.wordSearchSelection span {
+	margin-right: 15px;
+}
+
+li .wordSearchSelection .removeWordListItem {
+	position: absolute;
+	top:2px;
+	right:1px;
+	display:block;
+	width:11px;
+	cursor: pointer;
+	height:12px;
+}
+
+.wordSearchSelection .mark {
+	top: -5px;
+	right: -30px;
+}
+
+/* CROSSWORD */
+.crosswordContainer {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.rcfCrossword .jsonObject {
+	display:none;
+}
+
+.rcfCrossword.invalid {
+	border: 1px double #FF0000;
+}
+table.crossword {
+	background: #333;
+	margin: 3px;
+	padding: 11px;
+	border: 1px solid #ccc;
+	border-collapse: separate;
+}
+
+table.crossword tr {
+	margin: 0;
+	padding: 0;
+}
+
+table.crossword td {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	border: none;
+}
+
+table.crossword td.word {
+	/*	padding:1px;*/
+	position: relative;
+}
+
+table.crossword td.word .mark {
+	position: absolute;
+}
+
+table.crossword td.word .vertical.mark {
+	position:absolute;
+	top: 25px;
+	right: -25px;
+	right: 5px\0/; /* IE8 + */
+}
+
+table.crossword td.word .horizontal.mark {
+	position:absolute;
+	top:0px;
+	right: -50px;
+	right: -20px\0/; /* IE8 + */
+}
+
+/* firefox style fixes for crossword - uses '@-moz-document' as a hacky-hack */
+@-moz-document url-prefix() {
+
+	/* firefox only styles because of broken relative / abs positioned elements in a table cell */
+	table.crossword td.word .horizontal.mark {
+		position: absolute;
+		top: 0;
+		right: -25px;
+	}
+
+	table.crossword td.word .vertical.mark {
+		position:absolute;
+		top: 22px;
+		right: 0;
+	}
+
+}
+
+table.crossword td .relSpan {
+	position: relative;
+}
+
+table.crossword td .clueNumber {
+	position: absolute;
+	display: inline-block;
+	top: -5px;
+	font-size: 0.8em;
+	left: 0;
+	padding-left: 2px;
+	margin: 0 0.1em;
+	vertical-align: middle;
+	line-height: 1em;
+	margin: 0.3em 0.1em;
+	color: #777;
+}
+
+
+table.crossword input {
+	padding: 2px 2px 2px 2px;
+	text-transform: uppercase;
+	margin: 1px;
+	border: 0;
+	text-align: center;
+	color: #333;
+	font-size: 1em;
+	background-color: #FFF;
+	width: 22px;
+	height: 22px;
+}
+
+table.crossword input.example {
+	background-color: #aaa;
+	font-style: normal;
+}
+
+table.crossword input.hiddenLetter {
+	background-color: #445566;
+}
+
+table.crossword td.example .clueNumber {
+	color: #777;
+}
+table.crossword input.editing {
+	background-color: #FFD700;
+}
+
+table.crossword input.incorrect {
+	/* */
+}
+
+.crosswordClueContainer {
+	font-size: smaller;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.crosswordClueContainer li {
+	cursor: pointer;
+}
+
+.crosswordClueContainer li .crosswordClueNumber {
+	font-weight: bold;
+}
+.crosswordClueContainer .across {
+	float: left;
+	width: 50%;
+}
+
+.crosswordClueContainer .down {
+	float: right;
+	width: 50%;
+}
+
+/* no floaty divs on mobile */
+.mobile .crosswordClueContainer .across {
+	width: 100%;
+}
+
+.mobile .crosswordClueContainer .down {
+	width: 100%;
+}
+.crosswordContainer .popup {
+	display:none;
+}
+.mobile .crosswordContainer .popup {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	background-color:#FFF;
+	z-index: 10001;
+	padding: 2em;
+	width: 300px;
+	margin-left: -150px;
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.crosswordClueContainer li.selected, .crosswordClueContainer li:hover {
+	color: #000;
+	background-color: #FFD700;
+}
+.crosswordPopup {
+	display: none;
+	top: 20%;
+	left: 20px;
+	position: absolute;
+	background-color: #FFF;
+	z-index: 10001;
+	padding: 20px;
+	max-width: 300px;
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+	min-width: 300px;
+}
+.crosswordPopup .crosswordMobileTypein {
+	width: 100%;
+	height: 1.5em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+
+/* MATCHING */
+.matchingContainer {
+	position: relative;
+}
+.matchingContainer.vertical .matchItems {
+	float: left;
+}
+.matchingContainer.vertical .matchTargets {
+	float: right;
+}
+.matchingContainer.horizontal .matchItems {
+	display: block;
+	margin-bottom: 100px;
+}
+.matchingContainer.horizontal .matchTargets {
+	margin-top: 100px;
+	display: block;
+}
+.matchingContainer.horizontal .matchItemContainer,
+.matchingContainer.horizontal .matchTargetContainer {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 25px;
+}
+.matchingContainer.horizontal .matchTargetContainer.distractor,
+.matchingContainer.vertical .matchTargetContainer.distractor {
+	display: none;
+}
+.matchItems > div, .matchTargets > div {
+	border: 1px solid #346789;
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 19px #AAA;
+	margin-top: 10px;
+}
+.matchItems .matchItem.selected {
+	color: #FFF;
+	border-radius: 0.5em;
+}
+.matchingContainer .matchItemContainer,
+.matchingContainer .matchTargetContainer {
+	background-color: #EEE;
+	cursor: pointer;
+}
+.matchItem, .matchTarget {
+	padding: 20px;
+}
+.matchTargetContainer  .markContainer {
+	position: relative;
+}
+.matchTargetContainer .markContainer .mark {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+.matchTargetContainer.distractor {
+	display: none;
+}
+._jsPlumb_endpoint_drop_allowed svg * {
+	fill: #FF0000;
+}
+._jsPlumb_endpoint_full {
+	color: #FF0000;
+}
+._jsPlumb_endpoint { /* moves endpoints above paths in stacking order */
+	z-index: 1;
+}
+.matchingContainer svg.userAnswer path,
+.matchingContainer svg.showCorrectAnswer path,
+.matchingContainer svg.showIncorrectAnswer path,
+.matchingContainer svg.matchTarget path {
+	stroke: #445566;
+}
+.matchingContainer svg.showExampleAnswer path {
+	stroke: #EEE;
+}
+
+
+
+/* PELMANISM
+
+	<div class="pelmanismContainer" data-rcfinteraction='pelmanism'
+		data-rcfid=.... data-numcards=.... data-pairs="pair class | pair class | etc"
+	>
+		<!-- optional 'pelmanismAttempts' -->
+		<div class="pelmanismAttempts">
+			<span class="attempts">Attempts: <span class="numAttempts">nn</span></span>
+   		</div>;
+   		<!-- optional 'timeLimit' -->
+   		<div class="pelmanismTimer">
+   			<span class="timer">00:00 etc</span>
+   		</div>
+
+   		<div class="cards">
+			... for each card ..
+			<div class="cardContainer">
+				<div class="card  {pairClass} {card class}"
+					data-pairClass="pairClass"
+					data-rank=...
+					data-audio=...
+				>
+					<div class="back">
+						<!-- empty ? -->
+					</div>
+					<div class="front">
+						<!-- card html contents -->
+					</div>
+				</div>
+			</div>
+			<!-- clearing div -->
+			<div class="clear"></div>
+   		</div>
+ </div>
+ */
+.pelmanismContainer {
+	border: 1px solid #ddd;
+	padding-top: 40px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+/* timed pelmanism have 'game over' and 'success' banners */
+.pelmanismContainer .gameOverStage {
+	display: none;
+}
+
+.pelmanismContainer.timed.gameOver .gameOverStage {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../images/hangman-game-over.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: pelmanismTada 1s;
+	-webkit-animation: pelmanismTada 1s;
+	-moz-animation: pelmanismTada 1s;
+	-o-animation: pelmanismTada 1s;
+	border:none;
+}
+.pelmanismContainer.timed.gameOver.completed .gameOverStage {
+	background: url(../images/hangman-you-win.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.pelmanismContainer .timer {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	background: #eee;
+	color: #222;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 5px;
+	box-shadow: 0 1px 6px 0 rgba(102,102,102,0.4);
+	z-index: 201;
+}
+.pelmanismContainer.gameOver.completed .timer {
+	color: #008000;
+}
+.pelmanismContainer.gameOver .numAttempts {
+	color: #FF0000;
+}
+.pelmanismContainer.gameOver.completed .numAttempts {
+	color: #008000;
+}
+.pelmanismContainer .pelmanismAttempts {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	background: #eee;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 5px;
+	box-shadow: 0 1px 6px 0 rgba(102,102,102,0.4);
+	z-index: 201;
+}
+.pelmanismContainer.hurryUp .timer {
+	color: #FF0000;
+	font-weight: bold;
+	animation: pelmanismTada 1s 10;
+	-webkit-animation: pelmanismTada 1s 10;
+	-moz-animation: pelmanismTada 1s 10;
+	-o-animation: pelmanismTada 1s 10;
+}
+.pelmanismContainer .cards {
+	text-align: center;
+}
+.cardContainer {
+	display:none;
+	text-align: initial;
+	position: relative;
+	margin: 15px 15px;
+	height: 200px;
+	width: 160px;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-ms-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px;
+	cursor: pointer;
+}
+.pelmanismContainer.gameOver .cardContainer {
+	cursor: not-allowed;
+}
+.cardContainer.playingCard {
+	display: inline-block;
+}
+.cardContainer .card {
+	width: 100%;
+	height: 100%;
+}
+.cardContainer .card .front, .cardContainer .card .back {
+	border: 1px solid #bbb;
+	box-shadow: 5px 5px 10px 0 rgba(102,102,102,0.4);
+}
+
+/* '.flipped' is added to a card when the user clicks on it */
+.cardContainer .card.flipped .back {
+	-webkit-transform: perspective(800px) rotateY(-179.9deg);
+	-moz-transform: perspective(800px) rotateY(-179.9deg);
+	transform: perspective(800px) rotateY(-179.9deg);
+}
+.cardContainer .card.flipped .front {
+	-moz-transform: perspective(800px) rotateY(0);
+	-webkit-transform: perspective(800px) rotateY(0);
+	transform: perspective(800px) rotateY(0);
+}
+
+/* each div inside the 'cardContainer > .card' gets this style (back) */
+.cardContainer .card .front, .cardContainer .card .back {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-size: contain;
+}
+
+/* the card 'back' */
+.cardContainer .card .back {
+	background-color: #ddd;
+	position: absolute;
+	padding: 5px;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transform: perspective(800px) rotateY(0deg);
+	-webkit-transform: perspective(800px) rotateY(0deg);
+	transform: perspective(800px) rotateY(0deg);
+}
+
+/* the 'front' of the card */
+.cardContainer .card .front {
+	position: absolute;
+	background-color: #eee;
+	top: 0;
+	bottom: 0;
+	background-size: contain;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-transform: perspective(800px) rotateY(180deg);
+	-webkit-transform: perspective(800px) rotateY(180deg);
+	transform: perspective(800px) rotateY(180deg);
+	padding: 5px;
+}
+
+/* class added to cardContainer of a matched pair
+	- use to run an animation if required
+*/
+.cardContainer.matchedPair:not(.shownAnswer) {
+	opacity: 1;
+	animation: pelmanismTada 1s;
+	-webkit-animation: pelmanismTada 1s;
+	-moz-animation: pelmanismTada 1s;
+	-o-animation: pelmanismTada 1s;
+}
+
+/* class added to the pelmanismContainer when game is over */
+.pelmanismContainer.completed {
+	animation: pelmanismComplete 1s 4 alternate;
+	-webkit-animation: pelmanismComplete 1s 4 alternate;
+	-moz-animation: pelmanismComplete 1s 4 alternate;
+	-o-animation: pelmanismComplete 1s 4 alternate;
+}
+
+.isIE.no-csstransforms3d .pelmanismContainer.completed {
+	border: 10px solid #FF0000;
+}
+
+/* pelmanism animations */
+@-webkit-keyframes pelmanismTada {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	10%, 20% {
+		-webkit-transform: scale(0.9) rotate(-3deg);
+		transform: scale(0.9) rotate(-3deg);
+	}
+
+	30%, 50%, 70%, 90% {
+		-webkit-transform: scale(1.1) rotate(3deg);
+		transform: scale(1.1) rotate(3deg);
+	}
+
+	40%, 60%, 80% {
+		-webkit-transform: scale(1.1) rotate(-3deg);
+		transform: scale(1.1) rotate(-3deg);
+	}
+
+	100% {
+		-webkit-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+}
+
+@-o-keyframes pelmanismTada {
+	0% {
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+
+	10%, 20% {
+		-o-transform: scale(0.9) rotate(-3deg);
+		transform: scale(0.9) rotate(-3deg);
+	}
+
+	30%, 50%, 70%, 90% {
+		-o-transform: scale(1.1) rotate(3deg);
+		transform: scale(1.1) rotate(3deg);
+	}
+
+	40%, 60%, 80% {
+		-o-transform: scale(1.1) rotate(-3deg);
+		transform: scale(1.1) rotate(-3deg);
+	}
+
+	100% {
+		-o-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+}
+
+@keyframes pelmanismTada {
+	0% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+
+	10%, 20% {
+		-webkit-transform: scale(0.9) rotate(-3deg);
+		-ms-transform: scale(0.9) rotate(-3deg);
+		-o-transform: scale(0.9) rotate(-3deg);
+		transform: scale(0.9) rotate(-3deg);
+	}
+
+	30%, 50%, 70%, 90% {
+		-webkit-transform: scale(1.1) rotate(3deg);
+		-ms-transform: scale(1.1) rotate(3deg);
+		-o-transform: scale(1.1) rotate(3deg);
+		transform: scale(1.1) rotate(3deg);
+	}
+
+	40%, 60%, 80% {
+		-webkit-transform: scale(1.1) rotate(-3deg);
+		-ms-transform: scale(1.1) rotate(-3deg);
+		-o-transform: scale(1.1) rotate(-3deg);
+		transform: scale(1.1) rotate(-3deg);
+	}
+
+	100% {
+		-webkit-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+}
+
+@-webkit-keyframes pelmanismComplete {
+	0% {
+		-webkit-transform: scale(1);
+		box-shadow: 3px 3px 19px #FFF;
+	}
+	50% {
+		-webkit-transform: scale(0.98);
+	}
+	100% {
+		-webkit-transform: scale(1.02);
+		box-shadow: 2px 2px 19px #FF0000;
+	}
+}
+
+@-o-keyframes pelmanismComplete {
+	0% {
+		box-shadow: 3px 3px 19px #FFF;
+	}
+	100% {
+		box-shadow: 2px 2px 19px #FF0000;
+	}
+}
+
+@keyframes pelmanismComplete {
+	0% {
+		box-shadow: 3px 3px 19px #aaa;
+	}
+	100% {
+		box-shadow: 2px 2px 19px #FF0000;
+	}
+}
+
+.no-csstransforms3d .card .bottom, .isIE .card .bottom {
+	z-index: -1
+}
+
+.no-csstransforms3d .card.flipped .bottom, .isIE .card.flipped .bottom {
+	z-index: 1
+}
+
+/* custom pelmanism completed animation */
+@-webkit-keyframes pelmanismCompleted {
+	0% {
+		border: 1px solid #FF0000;
+		-webkit-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+	100% {
+		border: 10px solid #FF0000;
+		-webkit-transform: scale(2) rotate(359deg);
+		-ms-transform: scale(2) rotate(359deg);
+		-o-transform: scale(2) rotate(359deg);
+		transform: scale(2) rotate(359deg);
+	}
+}
+
+@-moz-keyframes pelmanismCompleted {
+	0% {
+		border: 1px solid #FF0000;
+		-webkit-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+		-moz-transform: scale(1) rotate(0);
+	}
+	100% {
+		border: 10px solid #FF0000;
+		-webkit-transform: scale(2) rotate(359deg);
+		-ms-transform: scale(2) rotate(359deg);
+		-o-transform: scale(2) rotate(359deg);
+		transform: scale(2) rotate(359deg);
+		-moz-transform: scale(2) rotate(359deg);
+	}
+}
+
+@-o-keyframes pelmanismCompleted {
+	0% {
+		-webkit-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+	100% {
+		-webkit-transform: scale(2) rotate(45);
+		-ms-transform: scale(2) rotate(45);
+		-o-transform: scale(2) rotate(45);
+		transform: scale(2) rotate(45);
+	}
+
+}
+
+@keyframes pelmanismCompleted {
+	0% {
+		border: 1px solid #FF0000;
+		-webkit-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+		-moz-transform: scale(1) rotate(0);
+	}
+	100% {
+		border: 10px solid #FF0000;
+		-webkit-transform: scale(2) rotate(359deg);
+		-ms-transform: scale(2) rotate(359deg);
+		-o-transform: scale(2) rotate(359deg);
+		transform: scale(2) rotate(359deg);
+		-moz-transform: scale(2) rotate(359deg);
+	}
+
+}
+
+/* FLASH PLAYER */
+.rcfFlashObjectContainer {
+	border: 1px solid #999;
+	height:400px;
+	width:100%;
+	position:relative;
+}
+
+.rcfFlashObjectContainer .rcfFlashControls {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	opacity:0.2;
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+.rcfFlashObjectContainer:hover .rcfFlashControls {
+	opacity: 1;
+}
+
+.rcfFlashObjectContainer .rcfFlashControls div {
+	float: left;
+}
+
+/* CAROUSEL ELEMENTS - simple and 'complex' */
+
+.rcfCarousel {
+
+}
+
+.rcfCarousel.simple.owl-carousel {
+	border: 1px solid #aaa;
+	margin: 25px;
+	padding: 30px;
+	width: auto;
+}
+
+.rcfCarousel .navLeftButton {
+	position: absolute;
+	font-weight: bold;
+	top: 48%;
+	left: -10px;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-right: 8px;
+	z-index:201;
+	background: #ccc;
+	color: #eee;
+	cursor: pointer;
+}
+.rcfCarousel .navLeftButton:before {
+	content: '\25c0';
+}
+
+.rcfCarousel .navRightButton {
+	position: absolute;
+	font-weight: bold;
+	top: 48%;
+	right: -10px;
+	padding-left: 8px;
+	padding-top: 2px;
+	padding-right: 4px;
+	z-index:201;
+	background: #ccc;
+	color: #eee;
+	cursor: pointer;
+}
+.rcfCarousel .navRightButton:before {
+	content: "\25ba";
+}
+.rcfCarousel .navLeftButton:hover, .rcfCarousel .navRightButton:hover {
+	background: #aaa;
+	color: #fff;
+}
+.rcfCarousel .block.item { /* , .rcfSimpleCarousel .block.item {*/
+	display: block;
+	margin:10px;
+	padding: 10px;
+	height: auto;
+	min-height: 200px;
+}
+
+/* (NOT) Hangman */
+.hangmanContainer {
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.hangmanGame {
+	height: 300px;
+	overflow: hidden;
+}
+
+.hangmanGame .triesRemaining {
+	position: absolute;
+	display: inline-block;
+	top:0;
+	right: 0;
+	background: #eee;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:5px;
+	color: #111;
+	box-shadow: 0 1px 6px 0 rgba(102,102,102,0.4);
+	z-index: 201;
+}
+
+.hangmanGame .triesRemaining .tries {
+	font-weight: bold;
+	color: #0000FF;
+
+}
+
+.hangmanContainer.gameOver .hangmanGame .triesRemaining {
+	/*	left in - could animate this if required */
+}
+
+.hangmanInteractionContainer {
+	padding: 10px;
+	background: #eee;
+}
+.hangmanContainer .wordClue {
+	display: none;
+	text-align: center;
+	font-style: italic;
+}
+
+.hangmanContainer.showClue .wordClue.active {
+	display:block;
+	text-align: center;
+	font-style: italic;
+}
+
+.hangmanContainer .wordContainer, .hangmanContainer .letterChooser {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.hangmanContainer .wordContainer .letterContainer {
+	position: relative;
+	overflow: none;
+	border-radius: 5px;
+	padding: 8px;
+	margin: 3px;
+	display: inline-block;
+	min-width: 1em;
+	box-shadow: 5px 5px 5px 1px rgba(102,102,102,1);
+	background: #FFF;
+}
+
+.hangmanContainer .wordContainer .letterContainer.space,
+.hangmanContainer .wordContainer .letterContainer.hyphen {
+	position: relative;
+	overflow: none;
+	padding: 8px;
+	margin: 3px;
+	display: inline-block;
+	min-width: 0.5em;
+	box-shadow: none;
+	background: transparent;
+	border-radius: 0;
+}
+
+.hangmanContainer .wordContainer .letterContainer.space .space {
+	background: transparent;
+}
+
+.hangmanContainer .wordContainer .letterContainer .letter {
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	display:inline-block;
+	visibility:hidden;
+	transform: scale(5) rotate(120deg);
+	-webkit-transform: scale(5) rotate(120deg);
+	-moz-transform: scale(5) rotate(120deg);
+	-o-transform: scale(5) rotate(120deg);
+}
+
+.hangmanContainer .wordContainer .letterContainer .letter.correct,
+.hangmanContainer .wordContainer .letterContainer .letter.hyphen,
+.hangmanContainer .wordContainer .letterContainer .letter.space {
+	visibility: visible;
+	background-image:none;
+	font-weight: bold;
+	transform: scale(1) rotate(0);
+	-webkit-transform: scale(1) rotate(0);
+	-moz-transform: scale(1) rotate(0);
+	-o-transform: scale(1) rotate(0);
+}
+
+
+.hangmanContainer .letterChooser .letter {
+	display: inline;
+	display: inline-block;
+	min-width: 1em;
+	padding: .2em .3em;
+	font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	-moz-border-radius: .3em;
+	-webkit-border-radius: .3em;
+	border-radius: .3em;
+	border: none;
+	cursor: default;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+	font-weight: bold;
+	font-size:1.2em;
+	color:#FFF;
+	margin: 5px;
+	padding:10px;
+	cursor: pointer;
+	background: rgb(80, 80, 80);
+	background: -moz-linear-gradient(top, rgb(60, 60, 60), rgb(80, 80, 80));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(60, 60, 60)), to(rgb(80, 80, 80)));
+	color: rgb(250, 250, 250);
+	text-shadow: -1px -1px 0 rgb(70, 70, 70);
+	-moz-box-shadow: inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3);
+	-webkit-box-shadow: inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3);
+	box-shadow: inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3);
+
+}
+
+.hangmanContainer .letterChooser .letter.clicked {
+	background: #aaa;
+	color: #888;
+}
+
+.hangmanContainer .stage {
+	position: relative;
+	height: 100%;
+	background: #FFF;
+	display:none;
+	-webkit-transition: left 800ms cubic-bezier(0.000, 0.000, 0.575, 0.150);
+	-moz-transition: left 800ms cubic-bezier(0.000, 0.000, 0.575, 0.150);
+	-o-transition: left 800ms cubic-bezier(0.000, 0.000, 0.575, 0.150);
+	transition: left 800ms cubic-bezier(0.000, 0.000, 0.575, 0.150); /* custom */
+}
+
+.hangmanContainer .stage.current {
+	display:block;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.hangmanContainer .stage1 {
+	display:block;
+	background: url(../images/not-hangman-1.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage2 {
+	display:block;
+	background: url(../images/not-hangman-2.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage3 {
+	display:block;
+	background: url(../images/not-hangman-3.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage4 {
+	display:block;
+	background: url(../images/not-hangman-4.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage5 {
+	display:block;
+	background: url(../images/not-hangman-5.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage6 {
+	display:block;
+	background: url(../images/not-hangman-6.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage7 {
+	display:block;
+	background: url(../images/not-hangman-7.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage8 {
+	display:block;
+	background: url(../images/not-hangman-8.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hangmanContainer .stage {
+	display:none;
+}
+
+.hangmanContainer.gameOver {
+
+}
+
+.hangmanContainer .hangmanGame .stage.gameOverStage {
+	display:none;
+}
+
+.hangmanContainer.gameOver .stage.gameOverStage {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:block;
+	background: url(../images/hangman-game-over.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	animation: pelmanismTada 1s;
+	-webkit-animation: pelmanismTada 1s;
+	-moz-animation: pelmanismTada 1s;
+	-o-animation: pelmanismTada 1s;
+	border:none;
+}
+
+.hangmanContainer.gameOver .stage.gameOverStage .tryAgainButton {
+	position: fixed;
+	bottom:0;
+	right:0;
+}
+
+.hangmanContainer.gameOver.youWin .stage.gameOverStage {
+	background: url(../images/hangman-you-win.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+/* vertical crossword */
+.verticalCrosswordContainer {
+	margin: 3px 0;
+	word-spacing: 0.5em;
+
+}
+
+.verticalCrosswordContainer table {
+	border: none;
+	letter-spacing: 0.2em;
+}
+
+.verticalCrosswordContainer table tr td {
+	border: none;
+	padding: 2px;
+}
+
+.verticalCrosswordContainer table input {
+	border: 1px solid #000;
+	padding: 5px;
+	font-size: 1em;
+	margin-right: 0.2em;
+	text-transform: uppercase;
+	-webkit-user-select: text; /* allow text input on iOS */
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0;
+	background-color: #f8f8f8;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 1px 1px 2px #999;
+	-webkit-box-shadow: inset 1px 1px 2px #999;
+	box-shadow: inset 1px 1px 2px #999;
+}
+
+.verticalCrosswordContainer table input.example {
+	border: 1px solid #ccc;
+	color: #666;
+}
+
+.verticalCrosswordContainer table input.hiddenLetter {
+	background: #0000FF;
+	color: #FFF;
+}
+
+.verticalCrosswordContainer table td.vcNumber {
+	text-align: right;
+	font-weight: bold;
+}
+
+.verticalCrosswordContainer table .mark {
+	width: 30px;
+	position: relative;
+	display: block;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+/*
+   <div class="interactiveImageSet mm_userclass">
+      <ul>
+         <li>
+           <span class="imageContainer">
+               <img src="...."></img>
+               <span class="caption {./caption/@type}">
+					<span class="innerCaption">
+						... caption text ..
+					</span>
+			   </span>
+		   </span>
+		 </li>
+	  </ul>
+  </div>
+ */
+
+.interactiveImageSet {
+	border: 1px solid #bbb;
+	position: relative;
+}
+
+.interactiveImageSet ul.images {
+	padding: 5px;
+}
+.interactiveImageSet li {
+	float: left;
+	list-style: none;
+	padding: 10px;
+	max-width: 200px;
+
+}
+.interactiveImageSet .imageContainer {
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
+	cursor: zoom-in;
+	-webkit-transition: all 1s ease; /* Safari and Chrome */
+	-moz-transition: all 1s ease; /* Firefox */
+	-ms-transition: all 1s ease; /* IE 9 */
+	-o-transition: all 1s ease; /* Opera */
+	transition: width 1s ease;
+}
+.interactiveImageSet .imageContainer img:hover {
+	/* Webkit for Chrome and Safari */
+	-webkit-transform: scale(1.1, 1.1);
+	-webkit-transition-duration: 500ms;
+	-webkit-transition-timing-function: ease-out;
+
+	-moz-transform: scale(1.1, 1.1);
+	-moz-transition-duration: 500ms;
+	-moz-transition-timing-function: ease-out;
+
+	-ms-transform: scale(1.1, 1.1);
+	-ms-transition-duration: 500ms;
+	-ms-transition-timing-function: ease-out;
+
+	transform: scale(1.1, 1.1);
+	transition-duration: 500ms;
+	transition-timing-function: ease-out;
+
+}
+
+.interactiveImageSet .imageContainer:hover {
+	box-shadow: 2px 2px 19px #444;
+}
+
+/* magnific overridden style */
+div.mfp-wrap.mfp-close-btn-in.rcfImagePopup.mfp-ready > div > div.mfp-content > div > button.mfp-close {
+	display:none;
+}
+
+/* flashcard styles */
+.flashcardContainer {
+	padding-left: 5px;
+	padding-right: 5px;
+	position: relative;
+}
+.flashcardMenuContainer {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2011;
+	text-align: right;
+}
+
+.flashcardMenuContainer .singleButton.flashcardMenuButton {
+	margin-right: 0;
+}
+
+.flashcardMenu.show {
+	display: block;
+	-webkit-animation: fadeIn 200ms ease;
+}
+
+.flashcardMenu {
+	background: #eee;
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	z-index: 2011;
+	width: 300px;
+	display:none;
+}
+
+.flashcardMenu .menuButtons {
+	text-align: center;
+	padding: 5px;
+}
+.flashcardMenu .flashcardMenuTitle {
+	height: 40px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 5px;
+	background: #aaa;
+	color: #222;
+}
+
+.flashcardMenu .flashcardDescriptors {
+	padding :0;
+}
+
+.flashcardMenu .flashcardDescriptors .descriptorMenuItem {
+	background: #FFF;
+	border-bottom: 1px solid #bbb;
+	cursor: pointer;
+}
+.flashcardMenu .flashcardDescriptors .descriptorLabel {
+	padding: 5px;
+}
+
+.flashcardMenu .flashcardDescriptors .descriptorMenuItem:hover {
+	background: #eee;
+}
+
+.flashcardMenu .descriptorToggle {
+	float: right;
+	background: #FFF;
+	margin: 5px;
+	text-align: center;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+}
+.flashcardMenu .descriptorLabel {
+	float: left;
+}
+
+
+.flashcardMenu .descriptorToggle span:first-child {
+	margin-right: 5px;
+}
+
+.flashcardMenu .descriptorToggle .on {
+	padding: 3px;
+	background-color: #FF0000;
+	color: #FF0000;
+}
+.flashcardMenu .descriptorToggle .off {
+	padding: 3px;
+	background-color: #008000;
+	color: #008000;
+}
+
+.flashcardMenu .descriptorToggle .on.selected {
+	background-color: #FFF;
+	color: #111;
+}
+
+.flashcardMenu .off.selected {
+	background-color: #FFF;
+	color: #111;
+}
+
+.flashcard {
+	padding-top: 30px;
+}
+
+.flashcard .cardDefinitionsContainer {
+	border-bottom: 1px dashed #ddd;
+	margin-bottom: 25px;
+}
+.flashcard .cardDefinitionsContainer .definitionTools {
+	text-align: center;
+}
+
+.flashcard .cardDefinitions {
+	margin-left: 40%;
+	margin-top: 5px;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+.flashcard .cardDefinitions .cardDefinition {
+	display:none;
+}
+
+.flashcard .cardDefinitions .cardDefinition.show {
+	display: block;
+}
+
+.interactiveImage.blur {
+	cursor: pointer;
+}
+
+.interactiveImageContainer.blur1 .interactiveImage.blur {
+	-moz-filter: blur(10px);
+	-ms-filter: blur(10px);
+	-o-filter: blur(10px);
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+}
+
+.interactiveImageContainer.blur2 .interactiveImage.blur {
+	-moz-filter: blur(5px);
+	-ms-filter: blur(5px);
+	-o-filter: blur(5px);
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+}
+
+.interactiveImageContainer.blur3 .interactiveImage.blur {
+	-moz-filter: blur(0px);
+	-ms-filter: blur(0px);
+	-o-filter: blur(0px);
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+}
+
+.interactiveImageContainer.blur0 .interactiveImage.blur {
+	-moz-filter: blur(15px);
+	-ms-filter: blur(15px);
+	-o-filter: blur(15px);
+	-webkit-filter: blur(15px);
+	filter: blur(15px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
+}
+
+.owl-nav .owl-prev {
+	position: absolute;
+	top: 48%;
+	left: -20px;
+	z-index: 201;
+}
+
+.owl-nav .owl-next {
+	position:absolute;
+	top: 48%;
+	right: -20px;
+	z-index: 201;
+}
+
+.rcfCarousel.owl-theme .owl-dots .owl-dot.active span {
+	box-shadow: 2px 2px 8px rgb(26, 26, 37);
+}
+
+.rcfCarousel.owl-carousel .owl-item img {
+	width: inherit;
+	transform-style: preserve-3d;
+}
+
+.flashcard .cardTitle, .flashcard .cardDescription {
+	text-align: center;
+}
+
+.flashcard .interactiveImage img {
+
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom:25px;
+}
+
+.flashcard .decriptorLabel {
+	color: #aaa;
+}
+
+.flashcard .definitionLabel {
+	color: #888;
+	font-weight: bold;
+}
+
+.rcfFlashcardMask {
+	position: fixed;
+	z-index: 2000;
+	display: none;
+	opacity: 0.5;
+	background: #000;
+	top: 0;
+	left: 0;
+	right:0;
+	bottom: 0;
+}
+
+.flashcardBlock {
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+.rcfFlashcardMask.show {
+	display: block;
+}
+
+
+.interactiveImageContainer {
+	margin-top: 10px;
+	position: relative;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+.interactiveImageContainer.spotlight {
+	background: #000;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+
+}
+
+.interactiveImageContainer.spotlight > div {
+	position: relative;
+}
+
+.interactiveImageContainer.spotlight .hidden {
+	visibility: hidden;
+}
+.interactiveImageContainer.spotlight .reveal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #FFF;
+	right: 15px;
+	cursor: pointer;
+}
+
+.interactiveImageContainer.spotlight .reveal:hover {
+	-webkit-animation: pulse 600ms infinite;
+}
+
+.interactiveImageContainer.spotlight .spotlight {
+	position: absolute;
+	box-shadow: 0 0 80px #FFF;
+	left: 1px;
+	top: 1px;
+	width: 33%;
+	height: 33%;
+	cursor: move;
+}
+
+.interactiveImageContainer.timed .interactiveImage  {
+	opacity: 0 ;
+	transition: opacity 300ms;
+	-moz-transition: opacity 300ms;
+	-webkit-transition: opacity 300ms;
+	/*visibility:hidden;*/
+}
+
+.interactiveImageContainer.timed .controlsContainer {
+	position: absolute;
+	width: 100%;
+	top: 40%;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+.interactiveImageContainer.timed .interactiveImage.show {
+	/*visibility: visible;*/
+	opacity: 1;
+}
+
+.interactiveImageContainer.timed .interactiveImage.show + .controlsContainer {
+	/*visibility: visible;*/
+	border: 10px solid #FF0000;
+	display: none;
+}
+
+.rcfCarousel .owl-dot.active.containsCorrectAnswer span, .rcfCarousel .owl-dot.containsCorrectAnswer span {
+	background-color: #008000;
+}
+
+.rcfCarousel .owl-dot.active.containsWrongAnswer span, .rcfCarousel .owl-dot.containsWrongAnswer span {
+	background-color: #FF0000;
+}
+
+/* moving targets styles */
+.rcfMovingTargets {
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+.rcfMovingTargets .jsonObject {
+	display:none;
+}
+
+.rcfMovingTargets .gameOver {
+	position: absolute;
+	color: white;
+	width:100%;
+	display: none;
+}
+
+.rcfMovingTargets.complete .gameOver {
+	top:50%;
+	text-align:center;
+	display: block;
+	-webkit-animation-name: gameOverBounceInDown 2s;
+	animation-name: gameOverBounceInDown 2s;
+}
+
+.rcfMovingTargets.missingLibrary {
+	border: 1px solid red;
+	padding: 10px;
+	text-align: center;
+}
+
+.rcfMovingTargets.complete {
+	animation: movingTargetsComplete 1s 4 alternate;
+	-webkit-animation: movingTargetsComplete 1s 4 alternate;
+	-moz-animation: movingTargetsComplete 1s 4 alternate;
+	-o-animation: movingTargetsComplete 1s 4 alternate;
+}
+
+@-webkit-keyframes gameOverBounceInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -3000px, 0);
+		transform: translate3d(0, -3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes gameOverBounceInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -3000px, 0);
+		transform: translate3d(0, -3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+
+
+@-webkit-keyframes movingTargetsComplete {
+	0% {
+		-webkit-transform: scale(1);
+		box-shadow: 3px 3px 19px #FFF;
+	}
+	50% {
+		-webkit-transform: scale(0.98);
+	}
+	100% {
+		-webkit-transform: scale(1.02);
+		box-shadow: 2px 2px 19px #FF0000;
+	}
+}
+
+@-o-keyframes movingTargetsComplete {
+	0% {
+		box-shadow: 3px 3px 19px #FFF;
+	}
+	100% {
+		box-shadow: 2px 2px 19px #FF0000;
+	}
+}
+
+@keyframes movingTargetsComplete {
+	0% {
+		box-shadow: 3px 3px 19px #aaa;
+	}
+	100% {
+		box-shadow: 2px 2px 19px #FF0000;
+	}
+}
+
+
+/* composite scene */
+
+.compositeSceneContainer {
+	width: 100%;
+	height: 400px;
+	border: 1px solid #bbb;
+}
+
+.compositeSceneContainer .startGame {
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.compositeSceneContainer.playing .startGame {
+	display: none;
+}
+
+.compositeSceneContainer .gameOver {
+	display: none;
+	position: absolute;
+	color: white;
+	width: 100%;
+}
+
+.compositeSceneContainer .playClueButton {
+	display: none;
+}
+
+
+.compositeSceneContainer.playing .playClueButton {
+	display: block;
+}
+
+.compositeSceneContainer.complete .gameOver {
+	display: block;
+	top: 48%;
+	text-align: center;
+}
+
+.compositeScene {
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	position: relative;
+	cursor: pointer;
+}
+
+.compositeScene img.compositeSceneBackground {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.compositeScene .playClueButton {
+	right: 0px;
+	bottom: -45px;
+	position: absolute;
+}
+
+.compositeScene .sceneItem {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+}
+
+.compositeScene .sceneItem.correct {
+	background: none;
+}
+
+/* colouring */
+
+.colouringContainer {
+	width: 100%;
+	height: 400px;
+	border: 1px solid #bbb;
+}
+
+.colouringContainer .startGame, .colouringContainer .clueTools {
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.colouringContainer.playing .startGame {
+	display: none;
+}
+
+.colouringContainer .gameOver {
+	display: none;
+	position: absolute;
+	color: white;
+	width: 100%;
+}
+
+.colouringContainer.complete .gameOver {
+	display: block;
+	color: green;
+	top:48%;
+	text-align:center;
+}
+
+.colouringContainer .clueTools {
+	display: none;
+	text-align: right;
+}
+
+.colouringContainer.playing .clueTools {
+	display: block;
+}
+
+.colouringContainer.complete .gameOver {
+	display: block;
+	top: 48%;
+	text-align: center;
+}
+
+.colouring {
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.colouring img.colouringBackground {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.colouringContainer .clueTools .playClueButton {
+	right: 0px;
+	position: absolute;
+}
+
+.colouring .coloursContainer {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.colouring .colourPaletteItem {
+	display: inline-block;
+}
+
+.colouring .colourPaletteItem.selected {
+	display: inline-block;
+	background-color: initial;
+	-webkit-animation: pulse 600ms infinite;
+	-moz-animation: pulse 600ms infinite;
+	animation: pulse 600ms infinite;
+}
+
+.colouring .colourItemsContainer {
+	bottom: 0;
+	left: 0;
+	height: 100%;
+}
+
+.colouring .colourItem {
+	position: absolute;
+}
+
+.colouring .colourItem.correct {
+	background:none;
+	animation: pelmanismTada 1s;
+	-webkit-animation: pelmanismTada 1s;
+	-moz-animation: pelmanismTada 1s;
+	-o-animation: pelmanismTada 1s;
+}
+
+
+/* override 'correct' class on this */
+.colourItem {
+	position: absolute;
+}
+
+
+/* listenAndColour (PBF) */
+.listenAndColour {
+	position: relative;
+}
+
+.listenAndColour .listenAndColourPalette ol {
+	display: block;
+	background: #ddd;
+}
+
+.listenAndColour {
+    position: relative;
+}
+
+.listenAndColour .listenAndColourPalette {
+    text-align: center;
+}
+
+.listenAndColour .listenAndColourPalette ol {
+    display: block;
+    background: #ddd;
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.listenAndColour .listenAndColourPalette ol li {
+    list-style: none;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 5px solid white;
+    position: relative;
+}
+
+.listenAndColour .listenAndColourPalette ol li .mark {
+    left: 80%;
+    top: 80%;
+}
+
+.listenAndColour .listenAndColourPalette ol li.selected {
+    border: 10px solid gold;
+}
+
+/* colors for demo activities for <listenAndColour>  - guess these will end up in activity / level css eventually ? */
+
+.listenAndColour .listenAndColourPalette ol li.red {
+    background: red;
+}
+
+.listenAndColour .listenAndColourPalette ol li.pink {
+    background: pink;
+}
+
+.listenAndColour .listenAndColourPalette ol li.green {
+    background: green;
+}
+
+.listenAndColour .listenAndColourPalette ol li.purple {
+    background: purple;
+}
+
+.listenAndColour .listenAndColourPalette ol li.cyan {
+    background: cyan;
+}
+
+.listenAndColour .listenAndColourPalette ol li.blue {
+	background: #36BFC9;
+}
+
+.listenAndColour .listenAndColourPalette ol li.black {
+	background-color: #000;
+}
+
+.listenAndColour .listenAndColourPalette ol li.grey {
+    background-color: #ccc;
+}
+
+.listenAndColour .listenAndColourPalette ol li.yellow {
+	background: #efe056;
+}
+
+.listenAndColour .listenAndColourPalette ol li.eraser {
+   background: #eee;
+   width: 100px;
+}
+
+/* make listenAndColour examples obvious somehow */
+.listenAndColour svg .example path {
+    stroke: #bbb;
+}
+
+.listenAndColour svg .red path {
+    fill: red;
+}
+
+.listenAndColour svg .pink path {
+    fill: pink
+}
+
+.listenAndColour svg .green path {
+    fill: green;
+}
+
+.listenAndColour svg .purple path {
+    fill: purple;
+}
+
+.listenAndColour svg .cyan path {
+    fill: cyan;
+}
+
+.listenAndColour svg .blue path {
+	fill: #36BFC9;
+}
+
+.listenAndColour svg .yellow path {
+	fill: #efe056;
+}
+
+.listenAndColour svg .black path {
+	fill: #000;
+}
+
+.listenAndColour svg .grey path {
+	fill: #ccc;
+}
+
+/* ui-resizable */
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+.ui-resizable-helper { border: 2px dotted #FFF; z-index: 999; }
+.nwgrip, .negrip, .swgrip, .segrip, .ngrip, .egrip, .sgrip, .wgrip {
+	width: 10px;
+	height: 10px;
+	background-color: #FFF;
+	border: 1px solid #000;
+}
+.nwgrip {
+	left: -5px;
+	top: -5px;
+}
+.negrip{
+	top: -5px;
+	right: -5px;
+}
+.swgrip{
+	bottom: -5px;
+	left: -5px;
+}
+.segrip{
+	bottom: -5px;
+	right:-5px;
+}
+.ngrip{
+	top: -5px;
+	left: 50%;
+}
+.sgrip{
+	bottom: -5px;
+	left: 50%;
+}
+.wgrip{
+	left: -5px;
+	top: 50%;
+}
+.egrip{
+	right: -5px;
+	top: 50%;
+}
+
+/* BUTTON */
+.flashcardButton {
+	text-align: center;
+	display: inline-block;
+	width: 60px;
+	font-size: 0.7em;
+	vertical-align: top;
+}
+.button {
+	display: inline-block;
+	border: 1px solid #BBB;
+	background-color: #EEE;
+}
+.selected .button {
+	border-color: #4E92E2;
+}
+
+/*** UNMARKED COMPONENENTS ***/
+
+/* IMAGE CAROUSEL */
+.main .flexslider ul {
+	padding: 0;
+}
+.flexslider .imageContainer {
+	display: inline;
+}
+
+/* IMAGE CAPTIONS */
+.imageContainer {
+	position: relative;
+	text-align: left;
+	display: block;
+	margin-bottom: 0.875em;
+}
+.imageContainer img, .mm_imageSet .imageContainer img, .blockSet .block .imageContainer img {
+	width: 100%;
+	margin: 0;
+}
+.caption {
+	position: absolute;
+	bottom: 0;
+	background-color: #000; /* IE8 Fallback */
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #FFF;
+	padding: 0;
+	width: 100%;
+	font-size: 0.7em;
+	line-height: 1.3em;
+	display: block;
+}
+.imageAudio {
+	border: 1px solid #50d8d7;
+}
+
+.activity span.imageAudio {
+    pointer-events: all;
+}
+
+.innerCaption {
+	padding: 0.3em 0.5em;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.caption.corner {
+	width: auto;
+	padding-right: 0.2em;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: bold;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-right-radius: 15px;
+}
+
+
+
+.popup {
+	position: absolute;
+	display: none;
+	-webkit-box-shadow: 3px 3px 8px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 3px 3px 8px rgba(50, 50, 50, 0.75);
+	box-shadow: 3px 3px 8px rgba(50, 50, 50, 0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	top: -100px;
+}
+.popupClose {
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	background-image: url(../images/close.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.popupClose {
+		background-image: url(../images/close@2x.png);
+		background-size: 32px;
+	}
+}
+
+.col {
+	margin-bottom: 1em;
+}
+.audio {
+	margin-bottom: 1em;
+}
+.audio.small {
+	margin-right: 0.5em;
+}
+
+/* inline audio elements */
+.inlinePlayer {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 5px;
+}
+.inlinePlayer a {
+	display: inline-block;
+	text-decoration: none;
+	width: 25px;
+}
+.inlinePlayer a.audioPlayButton {
+	background: url("../images/playsmall.png") no-repeat;
+}
+.inlinePlayer a.audioPlayButton:active {
+	background: url("../images/playsmallactive.png")  no-repeat;
+}
+.inlinePlayer a.audioPauseButton {
+	display:none;
+	background: url("../images/stopsmall.png")  no-repeat;
+}
+.inlinePlayer a.audioPauseButton:active {
+	background: url("../images/stopsmallactive.png")  no-repeat;
+}
+
+.inlinePlayer.playing a.audioPlayButton {
+	display:none;
+}
+
+.inlinePlayer.playing a.audioPauseButton {
+	display: inline-block;
+}
+
+.getusermedia .inlineAudioRecordingContainer,
+.no-getusermedia.IE .inlineAudioRecordingContainer {
+	display: inline-block;
+}
+
+.no-getusermedia .inlineAudioRecordingContainer {
+	display: none;
+}
+
+.inlineAudioRecordingContainer a {
+	display: inline-block;
+	text-decoration: none;
+	width: 25px;
+}
+
+.inlineAudioRecordingContainer a.audioRecordButton {
+	/* to be replaced with something nicer ! */
+	background: url("../images/record-button.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.inlineAudioRecordingContainer a.audioStopRecordButton {
+	background: url("../images/stopsmall.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.inlineAudioRecordingContainer a.audioStopRecordButton {
+	display:none;
+}
+
+.inlineAudioRecordingContainer.isRecording a.audioRecordButton {
+	display:none;
+}
+
+.inlineAudioRecordingContainer.isRecording a.audioStopRecordButton {
+	display: inline-block;
+}
+
+.inlineAudioRecordingContainer .inlineAudioRecordingPlayback {
+	display: none;
+}
+
+.inlineAudioRecordingContainer.hasRecording .inlineAudioRecordingPlayback {
+	display: inline-block;
+}
+
+.inlineAudioRecordingContainer.hasRecording:not(.playbackRecording) .inlineAudioRecordingPauseButton {
+	display: none;
+}
+
+.inlineAudioRecordingContainer .inlineAudioRecordingPlayButton {
+	background: url("../images/playsmall.png") no-repeat;
+}
+
+.inlineAudioRecordingContainer .inlineAudioRecordingPlayButton:active {
+	background: url("../images/playsmallactive.png") no-repeat;
+}
+
+.inlineAudioRecordingContainer .inlineAudioRecordingPauseButton {
+	background: url("../images/stopsmall.png") no-repeat;
+}
+
+.inlineAudioRecordingContainer .inlineAudioRecordingPauseButton:active {
+	background: url("../images/stopsmallactive.png") no-repeat;
+}
+
+.inlineAudioRecordingContainer.playbackRecording a.inlineAudioRecordingPlayButton {
+	display: none;
+}
+
+.inlineAudioRecordingContainer.playbackRecording a.inlineAudioRecordingPauseButton {
+	display: inline-block;
+}
+
+/* large audio recording defaults */
+.largeAudioRecording {
+	display: none;
+	background: rgba(153, 153, 153, 1);
+}
+
+.getusermedia .largeAudioRecording,
+.no-getusermedia.IE .largeAudioRecording {
+	display: block;
+}
+
+.largeAudioRecording .largeAudioRecordingIndicatorContainer {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	color: red;
+	text-transform: uppercase;
+}
+
+/* override this */
+.largeAudioRecording.hasRecording .largeAudioRecordingIndicatorContainer {
+	background: red;
+	color: white;
+}
+
+.largeAudioRecording .largeAudioRecordingPanel {
+	display:none;
+}
+
+.audioContainer.large .audioInterface.showRecordingPanel {
+	height: 110px;
+}
+
+.getusermedia .showRecordingPanel .largeAudioRecordingPanel,
+.no-getusermedia.IE .showRecordingPanel .largeAudioRecordingPanel {
+	display:block;
+}
+
+.largeAudioRecording .largeAudioRecordingPanel .audioRecordingControls {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 55px;
+}
+
+.largeAudioRecording .largeAudioRecordingPanel .audioRecordingControls a {
+	position: absolute;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 35px;
+	height: 35px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.largeAudioRecording .largeAudioRecordingPanel .audioRecordingControls a.disabled {
+	opacity: 0.5;
+}
+
+.audioRecordingControls a.audioRecordButton,
+.audioRecordingControls a.audioStopRecordButton {
+	top: 10px;
+	left: 4px;
+}
+
+.audioRecordingControls a.audioRecordButton {
+	background: url("../images/record-button.png");
+	background-size: contain;
+}
+
+.audioRecordingControls a.audioStopRecordButton {
+	background: url("../images/stop.png");
+}
+
+.audioRecordingControls a.audioRecordPlaybackButton {
+	top: 10px;
+	left: 36px;
+	background: url("../images/play.png");
+}
+
+.audioRecordingControls a.audioRecordStopPlaybackButton {
+	top: 10px;
+	left: 63px;
+	background: url("../images/stop.png");
+}
+
+.audioRecordingControls a.audioRecordPausePlaybackButton {
+	top: 10px;
+	left: 36px;
+	display: none;
+	background: url("../images/pause.png");
+}
+
+.largeAudioRecordingPanel .recordingProgressContainer {
+	position: absolute;
+	overflow: hidden;
+	background-color: #aaa;
+	top: 77px;
+	left: 103px;
+	width: 100px !important;
+	height: 15px;
+}
+
+.largeAudioRecordingPanel .recordingProgressContainer .recordingProgress {
+	width: 0;
+	height: 100%;
+}
+
+.largeAudioRecording.playbackRecording .recordingProgressContainer .recordingProgress,
+.largeAudioRecording.playbackRecordingPaused .recordingProgressContainer .recordingProgress{
+	background: black;
+}
+
+.largeAudioRecording.isRecording .recordingProgressContainer .recordingProgress {
+	background: red;
+}
+
+/* default recording controls states */
+.largeAudioRecording .audioRecordingControls .audioRecordButton {
+	display:block;
+}
+
+.largeAudioRecording .audioRecordingControls .audioStopRecordButton {
+	display: none;
+}
+
+.largeAudioRecording .audioRecordingControls .audioRecordPlaybackButton {
+	/* needs to be 'disabled' */
+	display: block;
+}
+
+.largeAudioRecording .audioRecordingControls .audioRecordPausePlaybackButton {
+	display: none;
+}
+
+.largeAudioRecording .audioRecordingControls .audioRecordStopPlaybackButton {
+	display: none;
+}
+
+.largeAudioRecordingPanel .recordingTimes {
+	position: absolute;
+	bottom: 15px;
+	right: 10px;
+	font-size: 0.7em;
+}
+
+.largeAudioRecordingPanel .recordingTimes .recordingCurrentTime:after {
+	content: ' / ';
+}
+
+/* has recording state */
+.largeAudioRecording.hasRecording .audioRecordingControls .audioRecordButton {
+	display:block;
+}
+
+.largeAudioRecording.hasRecording .audioRecordingControls .audioStopRecordButton {
+	display: none;
+}
+
+.largeAudioRecording.hasRecording .audioRecordingControls .audioRecordPlaybackButton {
+	display: block;
+}
+
+.largeAudioRecording.hasRecording .audioRecordingControls .audioRecordPausePlaybackButton {
+	display: none;
+}
+
+.largeAudioRecording.hasRecording .audioRecordingControls .audioRecordStopPlaybackButton {
+	display: none;
+}
+
+/* is recording states */
+.largeAudioRecording.isRecording .audioRecordingControls .audioRecordButton {
+	display:none;
+}
+
+.largeAudioRecording.isRecording .audioRecordingControls .audioStopRecordButton {
+	display: block;
+}
+
+/* needs to be 'disabled' */
+.largeAudioRecording.isRecording .audioRecordingControls .audioRecordPlaybackButton {
+	display: block;
+}
+
+.largeAudioRecording.isRecording .audioRecordingControls .audioRecordPausePlaybackButton {
+	display: none;
+}
+
+.largeAudioRecording.isRecording .audioRecordingControls .audioRecordStopPlaybackButton {
+	display: none;
+}
+
+/* playback recording states */
+.largeAudioRecording.playbackRecording .audioRecordingControls .audioRecordButton {
+	display:block;
+}
+
+.largeAudioRecording.playbackRecording .audioRecordingControls .audioStopRecordButton {
+	display: none;
+}
+
+.largeAudioRecording.playbackRecording .audioRecordingControls .audioRecordPlaybackButton {
+	display: none;
+}
+
+.largeAudioRecording.playbackRecording .audioRecordingControls .audioRecordPausePlaybackButton {
+	display: block;
+}
+
+.largeAudioRecording.playbackRecording .audioRecordingControls .audioRecordStopPlaybackButton,
+.largeAudioRecording.playbackRecordingPaused .audioRecordingControls .audioRecordStopPlaybackButton {
+	display: block;
+}
+
+.videoScript .infoBlockBody {
+	display: none;
+}
+/*  videosize */
+div.jp-video-360p {
+	width: 240px;
+	height: 193px;
+}
+.jp-type-single {
+	width: 240px;
+	height: 136px;
+}
+.videoPlayerInterface {
+	width: 238px;
+	height: 55px;
+}
+.wordCloud p {
+	line-height: 2.5em;
+}
+.wordCloud a {
+	text-decoration: none;
+	border-bottom: none;
+}
+.wordCloud a.popupLink:hover {
+	background-color: none;
+}
+.wordCloud a.pos_0 {
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #8A8EB5;
+}
+.wordCloud a.pos_1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #364349;
+}
+.wordCloud a.pos_2 {
+	font-size: 2em;
+	color: #405662;
+	font-weight: bold;
+}
+.wordCloud a.pos_3 {
+	font-size: 1em;
+	color: #494C6A;
+	font-weight: normal;
+}
+.wordCloud a.pos_4 {
+	font-size: 1.5em;
+	color: #3B5246;
+	font-weight: bold;
+}
+.wordCloud a.pos_5 {
+	font-size: 3em;
+	color: #84B69B;
+	font-weight: normal;
+}
+.wordCloud a.pos_6 {
+	font-size: 1.1em;
+	color: #8A8EB5;
+	font-weight: bold;
+}
+.wordCloud a.pos_7 {
+	font-size: 2.5em;
+	color: #9598B5;
+	font-weight: normal;
+}
+.wordCloud a.pos_8 {
+	font-size: 2.5em;
+	color: #364349;
+	font-weight: bold;
+}
+.wordCloud a.pos_9 {
+	font-size: 3em;
+	color: #3B5246;
+	font-weight: normal;
+}
+.wordCloud a.pos_10 {
+	font-size: 1.6em;
+	color: #8FA5B0;
+	font-weight: bold;
+}
+.wordCloud a.pos_11 {
+	font-size: 4em;
+	color: #405662;
+	font-weight: normal;
+}
+.wordCloud a.pos_12 {
+	font-size: 1.5em;
+	color: #91B6A2;
+	font-weight: bold;
+}
+.wordCloud a.pos_13 {
+	font-size: 2.8em;
+	color: #83A0B0;
+	font-weight: normal;
+}
+.wordCloud a.pos_14 {
+	font-size: 3.2em;
+	color: #84B69B;
+	font-weight: bold;
+}
+
+
+
+.mm_ITBDisplayNone .hidden {
+	display: none;
+}
+
+/* timedMarkupBlock */
+.timedMarkupBlock {
+
+}
+
+.timedMarkupBlock .timedMarkupContent {
+	opacity: 1;
+	-webkit-transition: opacity 300ms;
+	-moz-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+.timedMarkupBlock.mm_blur .timedMarkupContent {
+	-moz-filter: blur(5px);
+	-ms-filter: blur(5px);
+	-o-filter: blur(5px);
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+	opacity: 0.6;
+}
+.timedMarkupBlock.mm_hide .timedMarkupContent {
+	opacity: 0;
+	-webkit-transition: opacity 300ms;
+	-moz-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+
+
+/* BUTTONS */
+.extras {
+	position: relative;
+}
+.actScoring {
+	clear: both;
+}
+.actScoring .actScore {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 0.875em;
+}
+
+.checkAnswersPageButton {
+	min-width: 55px;
+}
+.tryAgainPageButton {
+	min-width: 35px;
+}
+.showAnswersPageButton {
+	min-width: 90px;
+}
+.singleButton.checkAnswersPageButton {
+	margin-right: 0;
+}
+.showAnswersPageButton.inactive {
+	opacity: 0.7;
+	color: #666;
+}
+
+.previousButton {
+	margin-right:3px;
+}
+.nextButton {
+	margin-left: 3px;
+}
+.closeButton {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 0.3em;
+	background-image: url(../images/close.svg);
+	background-position: center center;
+	background-size:100%;
+	cursor: pointer;
+}
+
+.singleButton, .leftButton, .middleButton, .rightButton {
+	padding: 0.2em 0.5em;
+	border: 1px solid #999;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+	cursor: pointer;
+	background: #FFFFFF; /* Old browsers */
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #FFFFFF 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #FFFFFF 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #FFFFFF 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #FFFFFF 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+/*.singleButton:active, */.leftButton:active, .middleButton:active, .rightButton:active {
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+}
+/*.singleButton.selected, */.leftButton.selected, .rightButton.selected, .middleButton.selected {
+	background: #666666; /* Old browsers */
+	background: -moz-linear-gradient(top, #666666 0%, #333333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666666), color-stop(100%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #666666 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #666666 0%,#333333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #666666 0%,#333333 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #666666 0%,#333333 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+	color: #FFF;
+	border-color: #666;
+}
+.singleButton {
+	margin-right: 1em;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.leftButton {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.rightButton {
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: none;
+}
+.middleButton {
+	border-left: none;
+}
+.actScoreButton {
+	text-align: center;
+	display: block;
+}
+.actScoring .singleButton {
+	display: block;
+	margin-right: 0;
+	margin-bottom: 0.4em;
+	padding: 0.4em;
+}
+.inactive {
+	opacity: 0.35;
+}
+.chaseControls, .playheadControls, .textControls {
+	margin-bottom: 1em;
+}
+.chaseControls a, .playheadControls a, .textControls a {
+	min-width: 4em;
+}
+
+/*** SPLIT BLOCK ***/
+.splitScreenBlock {
+	position: relative;
+	width: 100%;
+}
+.splitScreenBlock > div {
+	margin-bottom: 0;
+	vertical-align: top;
+}
+/* CONTROLS */
+.splitControls .singleButton {
+	margin: 0 auto;
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+	border-radius: 0;
+	display: inline-block;
+	background: none;
+	background-color: transparent;
+	filter: none; /* reset for IE9 */
+	background-repeat: no-repeat;
+}
+.splitControls .singleButton:active,
+.splitControls .singleButton.selected {
+	background: none;
+}
+.splitScreenBlock div img { /* use div for low specificity */
+	max-width: 100%; /* fix Firefox issue of image pushing outside of activity */
+}
+
+/* SCROLLBAR */
+.splitScreenBlock > .block > .block {
+	overflow-y: auto;
+	padding: 10px 10px 0 5px; /* to prevent marks and numbering to be cut */
+	box-sizing: border-box;
+}
+.splitScreenBlock > .block > .block::-webkit-scrollbar {
+	width: 10px;
+}
+/* Track */
+.splitScreenBlock > .block > .block::-webkit-scrollbar-track {
+	background-color: #D7D7D7;
+}
+/* Handle */
+.splitScreenBlock > .block > .block::-webkit-scrollbar-thumb {
+	background-color: #878787;
+}
+
+/* ONE PANEL OPEN */
+.splitScreenBlock:not(.secondPanelOpen) > .panelOneContainer > .block,
+.splitScreenBlock:not(.firstPanelOpen) > .panelTwoContainer > .block {
+	padding: 0;
+	padding-right: 10px; /* space between text and scrollbar */
+}
+.splitScreenBlock:not(.secondPanelOpen) .panelTwoContainer,
+.splitScreenBlock:not(.firstPanelOpen) > .panelOneContainer,
+.splitScreenBlock:not(.secondPanelOpen) .splitControls .firstPanel,
+.splitScreenBlock:not(.firstPanelOpen) .splitControls .secondPanel {
+	display: none;
+}
+
+/* FEEDBACK */
+.feedback {
+	color: #666;
+	display: none;
+}
+
+.showFeedback .feedback {
+	display: block;
+}
+
+/* horizontal style */
+/* Portrait */
+@media only screen and (orientation: landscape) {
+	.splitScreenBlock {
+		display: table;
+		table-layout: fixed; /* IE10 fix: prevent content to spread outside of activity */
+		width: 100%;
+	}
+	.splitScreenBlock > div {
+		display: table-cell;
+		box-sizing: border-box;
+	}
+	.splitScreenBlock > .block {
+		width: 50%;
+	}
+	/*.splitScreenBlock > .splitControls:before {*/
+	.splitScreenBlock > .block > .block {
+		height: 600px; /* to overwrite per project */
+	}
+	.splitScreenBlock > .panelOneContainer > .block {
+		margin-right: 10px;
+	}
+	.splitScreenBlock > .panelTwoContainer > .block {
+		margin-left: 10px;
+	}
+	/* CONTROLS */
+	/* IE10 doesn't detect :before height properly */
+	/* so background-image is used instead of border-color */
+	.splitScreenBlock > .splitControls {
+		vertical-align: middle;
+		width: 40px;
+		background-image: url('../images/slider_bar_vertical.jpg');
+		background-repeat: repeat-y;
+		background-position: 19px 0;
+	}
+	.splitControls .singleButton {
+		width: 20px;
+		height: 40px;
+	}
+	.splitControls .firstPanel {
+		background-image: url('../images/slider_arrow_right.png');
+		margin-left: 20px;
+	}
+	.splitControls .secondPanel {
+		background-image: url('../images/slider_arrow_left.png');
+	}
+	.splitScreenBlock .firstPanel:active,
+	.splitScreenBlock .firstPanel.selected {
+		background-image: url('../images/slider_arrow_right.png');
+	}
+	.splitScreenBlock .secondPanel:active,
+	.splitScreenBlock .secondPanel.selected {
+		background-image: url('../images/slider_arrow_left.png');
+	}
+	/* ONLY ONE PANEL OPEN */
+	.splitScreenBlock:not(.secondPanelOpen) > .panelOneContainer,
+	.splitScreenBlock:not(.firstPanelOpen) > .panelTwoContainer {
+		width: 100%;
+	}
+	.splitScreenBlock:not(.secondPanelOpen) .panelTwoContainer,
+	.splitScreenBlock:not(.firstPanelOpen) > .panelOneContainer {
+		display: none;
+	}
+	.splitScreenBlock:not(.secondPanelOpen) .splitControls,
+	.splitScreenBlock:not(.firstPanelOpen) .splitControls {
+		width: 20px;
+	}
+	/* PANEL 1 OPEN */
+	.splitScreenBlock:not(.secondPanelOpen) .splitControls {
+		background-position: 18px 0;
+	}
+	/* PANEL 2 OPEN */
+	.splitScreenBlock:not(.firstPanelOpen) .splitControls {
+		background-position: 0 0;
+	}
+	.splitScreenBlock:not(.firstPanelOpen) .splitControls .firstPanel {
+		margin-left: 0;
+	}
+}
+
+/* vertical split */
+@media only screen and (orientation: portrait) {
+	.splitScreenBlock > div {
+		width: 100%;
+	}
+	.splitScreenBlock > .block > .block {
+		height: 440px;
+	}
+	.splitScreenBlock > .panelOneContainer > .block {
+		margin-bottom: 10px;
+	}
+	.splitScreenBlock > .panelTwoContainer > .block {
+		margin-top: 10px;
+	}
+	/* CONTROLS */
+	/* IE10 doesn't detect :before height properly */
+	/* so background-image is used instead of border-color */
+	.splitScreenBlock > .splitControls {
+		position: relative;
+		height: 40px;
+		text-align: center;
+		background-image: url('../images/slider_bar_horizontal.jpg');
+		background-repeat: repeat-x;
+		background-position: 0 19px;
+	}
+	.splitControls .singleButton {
+		width: 40px;
+		height: 20px;
+	}
+	.splitControls .firstPanel {
+		background-image: url('../images/slider_arrow_down.png');
+		margin-top: 20px;
+	}
+	.splitControls .secondPanel {
+		background-image: url('../images/slider_arrow_up.png');
+		margin-bottom: 20px;
+	}
+	.splitScreenBlock .firstPanel:active,
+	.splitScreenBlock .firstPanel.selected {
+		background-image: url('../images/slider_arrow_down.png');
+	}
+	.splitScreenBlock .secondPanel:active,
+	.splitScreenBlock .secondPanel.selected {
+		background-image: url('../images/slider_arrow_up.png');
+	}
+	/* ONLY ONE PANEL OPEN */
+	.splitScreenBlock:not(.secondPanelOpen) > .panelOneContainer,
+	.splitScreenBlock:not(.firstPanelOpen) > .panelTwoContainer {
+		height: 100%;
+	}
+	.splitScreenBlock:not(.secondPanelOpen) .splitControls,
+	.splitScreenBlock:not(.firstPanelOpen) .splitControls {
+		height: 20px;
+	}
+	/* PANEL 1 OPEN */
+	.splitScreenBlock:not(.secondPanelOpen) .splitControls {
+		background-position: 0 18px;
+	}
+	.splitScreenBlock:not(.secondPanelOpen) .splitControls > .singleButton {
+		margin: 0;
+	}
+	/* PANEL 2 OPEN */
+	.splitScreenBlock:not(.firstPanelOpen) .splitControls {
+		background-position: 0 0;
+	}
+	.splitScreenBlock:not(.firstPanelOpen) .splitControls > .singleButton {
+		margin: 0;
+	}
+}
+
+/** BLENDED FLASHCARDS **/
+
+/* blendedFlashcard controls (topbar) */
+.blendedFlashcardControls {
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-bottom: 1px solid #C7C7C7;
+}
+.blendedFlashcardControls ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    list-style-type: none;
+    margin: 10px 0 5px;
+}
+.blendedFlashcardControls .sequenceControl {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 32px);
+    width: calc(50% - 226px);
+    text-align: center;
+    padding: 0;
+}
+.blendedFlashcardControls .blendedFlashcardShuffle {
+    display: block;
+    margin: auto;
+}
+.blendedFlashcardControls .blendedFlashcardShuffle a {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/blendedFlashcards_shuffle.svg);
+    -webkit-background-size: 18px;
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* hide the word "shuffle" */
+    color: transparent;
+
+}
+.blendedFlashcardControls .viewControlsContainer {
+    display: flex;
+}
+.blendedFlashcardControls .viewControlsContainer ul {
+    padding: 0;
+}
+.blendedFlashcardControls .viewControlsContainer .blendedFlashcardModes {
+    margin-left: 44px;
+}
+.blendedFlashcardControls .viewControlsContainer li {
+    margin: 0;
+    width: 64px;
+    text-align: center;
+}
+.blendedFlashcardControls .viewControlsContainer a {
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    position: relative;
+    -webkit-background-size: 26px;
+    background-size: 26px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.blendedFlashcardControls .viewControlsContainer a:before {
+    width: 28px;
+    padding: 2px;
+    display: block;
+    margin: 0 auto 7px;
+    border: 2px solid transparent;
+}
+.blendedFlashcardControls .blendedFlashcardShuffle a:active,
+.blendedFlashcardControls .blendedFlashcardShuffle a:hover,
+.blendedFlashcardControls .viewControlsContainer .active a:before,
+.blendedFlashcardControls .viewControlsContainer a:hover:before {
+    border-color: #1B60F4;
+}
+.blendedFlashcardControls .viewControlsContainer .viewFull a:before {
+    content: url(../images/blendedFlashcards_view_full.svg);
+}
+.blendedFlashcardControls .viewControlsContainer .viewSingle a:before {
+    content: url(../images/blendedFlashcards_view_single.svg);
+}
+.blendedFlashcardControls .viewControlsContainer .viewGrid a:before {
+    content: url(../images/blendedFlashcards_view_grid.svg);
+}
+.blendedFlashcardControls .viewControlsContainer .hideAll a:before {
+    content: url(../images/blendedFlashcards_modes_hideAll.svg);
+}
+.blendedFlashcardControls .viewControlsContainer .showTop a:before {
+    content: url(../images/blendedFlashcards_modes_showTop.svg);
+}
+.blendedFlashcardControls .viewControlsContainer .showBottom a:before {
+    content: url(../images/blendedFlashcards_modes_showBottom.svg);
+}
+.blendedFlashcardControls .viewControlsContainer .showAll a:before {
+    content: url(../images/blendedFlashcards_modes_showAll.svg);
+}
+/* hide single button if interaction contains text cards */
+.blendedFlashcards.hasTextCards .viewControlsContainer .viewSingle {
+    display: none;
+}
+
+/** blendedFlashcard stage layout */
+.blendedFlashcardStage {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 0 37px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: inline-block;
+}
+.blendedFlashcardStage .cardSet {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.blendedFlashcards.layoutSingle .cardSet li,
+.blendedFlashcards.layoutSingleThumbnails .cardSet li {
+    margin: auto;
+}
+
+/* blendedFlashcard hide inactive flashcards in single card view */
+.blendedFlashcards.layoutSingle .cardSet li:not(.active),
+.blendedFlashcards.layoutSingleThumbnails .cardSet li:not(.active) {
+    display: none;
+}
+
+/* blendedFlashcard layout grid */
+.blendedFlashcards.layoutGrid .cardSet {
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 972px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* blendedFlashcard card styling (default is single card view) */
+.blendedFlashcards .cardSet .card {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    border: 1px solid #C7C7C7;
+    background-color: #FFF;
+    margin: 7px;
+    width: 436px;
+    padding: 7px;
+}
+.blendedFlashcards .card .topContainer {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    min-height: 420px;
+    margin-bottom: 8px;
+}
+.blendedFlashcards .card .imageContainer img {
+    width: 100%;
+}
+
+/* blendedFlashcard layout grid view adjustment */
+.blendedFlashcards.layoutGrid .cardSet .card {
+    width: 148px;
+}
+.blendedFlashcards.layoutGrid .card .topContainer {
+    width: 100%;
+    min-height: 132px;
+}
+
+/* blendedFlashcard card selection controls */
+.blendedFlashcardSelection {
+    box-sizing: border-box;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blendedFlashcardSelection .cardList {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: 0 12px;
+    padding: 0;
+}
+.blendedFlashcardSelection .cardList li {
+    list-style-type: none;
+    margin: 0 6px;
+}
+.blendedFlashcardSelection a {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+}
+/* blendedFlashcard next/previous controls */
+.blendedFlashcardSelection .previousCard a,
+.blendedFlashcardSelection .nextCard a {
+    display: none;
+}
+.blendedFlashcardSelection .previousCard.active a {
+    display: block;
+    background-image: url(../images/blendedFlashcards_nav_previous.svg);
+    background-position: 10px 50%;
+}
+.blendedFlashcardSelection .nextCard.active a {
+    display: block;
+    background-image: url(../images/blendedFlashcards_nav_next.svg);
+    background-position: 13px 50%;
+}
+/* blendedFlashcard flashcard selection dots/thumbnails*/
+.blendedFlashcardSelection .cardList li a {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+}
+.blendedFlashcards.layoutSingle .cardList li a .imageContainer {
+    display: none;
+}
+
+.blendedFlashcards.layoutSingle .cardList li.active a {
+    background-color: #CCC;
+}
+.blendedFlashcards.layoutSingleThumbnails .cardList li a {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-content: center;
+    border: 2px solid transparent;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* blendedFlashcard adjustments for thumbnail view */
+.blendedFlashcards.layoutSingleThumbnails .cardList li.active a {
+    border-color: #CCC;
+}
+.blendedFlashcards.layoutSingleThumbnails .cardList li div {
+    display: inline;
+    align-self: center;
+}
+.blendedFlashcards.layoutSingleThumbnails .cardList li a img {
+    width: 100%;
+}
+
+/* layoutGrid: hide navigation */
+.blendedFlashcards.layoutGrid .blendedFlashcardSelection {
+    display: none;
+}
+
+/* blendedFlashcard Text label and audio player */
+.blendedFlashcards .word {
+    margin: 0;
+    vertical-align: middle;
+}
+.blendedFlashcards .word .inlinePlayerContainer {
+    margin-right: 8px;
+}
+.blendedFlashcards .word .inlinePlayerContainer,
+.blendedFlashcards .word .inlinePlayerContainer .inlinePlayer {
+    float: left;
+}
+.blendedFlashcards .word .textContainer {
+    line-height: 32px;
+    font-size: 22px;
+    display: block;
+    margin-left: 40px;
+}
+.blendedFlashcards.layoutGrid .word .textContainer {
+    line-height: 26px;
+    font-size: 18px;
+    margin-left: 31px;
+}
+
+/* blendedFlashcard hide image / text css */
+.blendedFlashcards .cardSet .card .textContainer {
+    position: relative;
+}
+.blendedFlashcards .cardSet .hideTop .topContainer:after,
+.blendedFlashcards .cardSet .hideBottom .textContainer:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    background-color: #E9E9E9;
+}
+
+/*** CONTENT STYLING ***/
+
+/* SPLIT BLOCK */
+/* with padder */
+.splitScreenBlock > .block > .mm_padder,
+.splitScreenBlock:not(.secondPanelOpen) > .panelOneContainer > .mm_padder,
+.splitScreenBlock:not(.firstPanelOpen) > .panelTwoContainer > .mm_padder {
+	padding: 0.875em;
+}
+/* no padding */
+.splitScreenBlock > .block > .mm_noPadding,
+.splitScreenBlock:not(.secondPanelOpen) > .panelOneContainer > .mm_noPadding,
+.splitScreenBlock:not(.firstPanelOpen) > .panelTwoContainer > .mm_noPadding {
+	padding: 0;
+}
+
+/* Pull Quote */
+.mm_quote {
+	background: url(../images/closequote.gif) no-repeat bottom right !important;
+	padding: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+	width: 100%;
+}
+.mm_quote:first-letter {
+	background: url(../images/openquote.gif) no-repeat left top !important;
+	padding-left: 40px !important;
+}
+
+/* Image Right - Used to Float an Image Right Inside an Infoblock */
+
+.mm_imageRight, .infoBlock.mm_imageRight {
+	padding: 0;
+}
+.mm_imageRight .infoBlock {
+	padding: 0.875em;
+	background: none;
+}
+.mm_imageRight .infoBlock .clear {
+	clear: none;
+}
+.mm_imageRight img {
+	margin-bottom: 0;
+}
+
+/* BLOCKSET FORMATTING OPTIONS */
+.mm_noBorderPaddingBB > .block {
+	padding: 0;
+	border: 0;
+}
+.mm_centeredBB > .block {
+	text-align: center;
+}
+.mm_greyBB .block {
+	background-color: #f8f8f8;
+	border: 1px solid #eee;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.mm_mobileDoubleUpBB {
+	text-align: center;
+}
+.mm_mobileDoubleUpBB .block {
+	width: 45%;
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+/* COLLAPSIBLE BLOCK */
+.collapsibleButton {
+	cursor: pointer;
+}
+.collapsibleContainer > .block, .collapsibleContainer > .infoBLock {
+	display: none;
+}
+.collapsibleContainer > .block.collapsibleOpen, .collapsibleContainer > .infoBlock.collapsibleOpen {
+	display:block;
+}
+
+
+/*** USEFUL ***/
+
+.mm_noWrap {
+	white-space: nowrap;
+}
+.mm_clear {
+	clear: both;
+}
+
+/* language switching button / blocks */
+
+.rubric[data-lang] {
+	display: none;
+}
+
+.rubric[data-lang].current {
+	display:block;
+}
+
+.toggleLanguageButton {
+	float: right;
+	margin-left: 10px;
+	margin-right: 0;
+	cursor: pointer;
+	filter: none;
+	background: #666;
+	color: #FFF;
+}
+
+.hintsContainer {
+	background-color: #EEE;
+	padding: 0.875em;
+}
+
+.hintBlock[data-lang] {
+	display: none;
+}
+.hintBlock[data-lang].current {
+	display: block;
+}
+
+/* sliding panels */
+/*
+<div class="slidingBlockContainer lastChild">
+	<span class="singleButton slidingBlockButton">blah</span>
+	<div class="slidingPanel from-">
+		<header class="slidingPanel-header">
+			<h1>This is the panel title</h1>
+			<span class="slidingPanelClose">Close</span>
+		</header>
+		<div class="slidingPanelContentBlockContainer">
+			<div class="slidingPanelContent"></div>
+		</div>
+	</div>
+</div>
+*/
+
+
+
+/* SLIDING BLOCK */
+.slidingBlock {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+	-webkit-transition: visibility 0s 0.6s;
+	-moz-transition: visibility 0s 0.6s;
+	transition: visibility 0s 0.6s;
+}
+/* overlay layer */
+.slidingBlock:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	cursor: pointer;
+	-webkit-transition: background 0.3s 0.3s;
+	-moz-transition: background 0.3s 0.3s;
+	transition: background 0.3s 0.3s;
+}
+.slidingBlock.slidingOpen {
+	visibility: visible;
+	-webkit-transition: visibility 0s 0s;
+	-moz-transition: visibility 0s 0s;
+	transition: visibility 0s 0s;
+}
+.slidingBlock.slidingOpen:after {
+	background: rgba(0, 0, 0, 0.6);
+	-webkit-transition: background 0.3s 0s;
+	-moz-transition: background 0.3s 0s;
+	transition: background 0.3s 0s;
+}
+
+
+/* SLIDING BLOCK: HEADER */
+.slidingHeader {
+	position: fixed;
+	width: 90%;
+	height: 50px;
+	line-height: 50px;
+	background-color : #E4E4E4;
+	padding: 5px 0.875em;
+	z-index: 9101;
+}
+
+
+/* SLIDING BLOCK: CLOSE */
+.slidingButtonClose:after,
+.slidingButtonClose:before {
+	content: none;
+}
+.slidingButtonClose {
+	color: #666;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 60px;
+	cursor: pointer;
+}
+.slidingButtonClose:hover {
+	color: #437082;
+}
+
+
+
+/* SLIDING BLOCK: PANEL */
+.slidingPanel {
+	position: fixed;
+	width: 90%;
+	height: 100%;
+	background: #FFF;
+	z-index: 9100;
+}
+
+
+/* SLIDING BLOCK: TRANSITION */
+.slidingHeader,
+.slidingPanel {
+	top: 0;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-delay: 0.3s;
+	-moz-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+.from-right .slidingHeader,
+.from-right .slidingPanel {
+	right: 0;
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	-ms-transform: translate3d(100%, 0, 0);
+	-o-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+.from-left .slidingHeader,
+.from-left .slidingPanel {
+	left: 0;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	-moz-transform: translate3d(-100%, 0, 0);
+	-ms-transform: translate3d(-100%, 0, 0);
+	-o-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+.slidingOpen .slidingHeader,
+.slidingOpen .slidingPanel {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+/* SLIDING BLOCK: CONTENT */
+.slidingContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0.875em;
+	padding-top: 70px;
+	overflow: auto;
+	background: #fff;
+	border: 1px solid #333;
+	/* smooth scrolling on touch devices */
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.slidingContent p {
+	margin-bottom: 0.875em;
+	line-height: 1.4;
+}
+
+.slidingContent p:last-child {
+	margin-bottom: 0;
+}
+
+/* pan zoom images  - start at full width for the user to zoom in / pan around as necessary*/
+.panzoomContainer {
+	background-color: #eee;
+}
+
+.imageTools {
+	display: block;
+	background-color: #aaa;
+	padding: 2px 10px;
+}
+
+.panzoomImageRefreshButton {
+	float: right;
+}
+
+.panzoomImageContainer {
+	position: relative;
+	text-align: left;
+	display: block;
+	margin-bottom: 0.875em;
+}
+
+.panzoomImageContainer img {
+	width: 90%;
+}
+
+
+.multiPanels .multiPanelCollapsibleContainer {
+	background-color: #fff;
+	padding: 0.875em;
+}
+
+.multiPanels .slidingContainer,
+.multiPanels .hintsButtonContainer,
+.multiPanels .collapsibleButtonContainer {
+	float: left;
+}
+.multiPanels .hintsContainer,
+.multiPanels .collapsibleContainer,
+.multiPanels .multiPanelCollapsibleContainer {
+	float: none;
+	clear: both;
+}
+
+/*
+
+	activity enabled / disable
+
+	So the rule are:
+
+	1. when the activity is 'disabled' (and not via instant feedback)
+		- disable all interactions
+		- disable inline audio players inside an rcf-interaction
+		- everything inside a wordbox (not technically part of the 'element' of the interaction)
+		- enable 'panzoom' images
+		- enable carousels
+		- enable audio players (large / small)
+		- enable video players
+		- enable anything with inline audio
+		- enable splitBlock containers
+
+	2. when the activity is 'disabled' because of feedback being shown
+		- disable everything :)
+
+*/
+.activity *[data-rcfinteraction] {
+	pointer-events: all;
+}
+
+.activity *[data-rcfinteraction] * {
+	touch-action:manipulation;
+	-ms-touch-action:manipulation;
+}
+
+
+.activity.disabled *[data-rcfinteraction],
+.activity.disabled .wordBox {
+	pointer-events: none;
+}
+
+.activity.disabled.rcfFeedbackPlaying *[data-rcfinteraction],
+.activity.disabled.rcfFeedbackPlaying .wordBox,
+.activity.disabled.rcfFeedbackPlaying *[data-audiolink] {
+	pointer-events: none;
+}
+
+.activity.disabled *[data-rcfinteraction='panZoomImage'],
+.activity.disabled *[data-rcfinteraction='carousel'],
+.activity.disabled *[data-rcfinteraction='simpleCarousel'],
+.activity.disabled *[data-rcfinteraction='audioElement'],
+.activity.disabled *[data-rcfinteraction='inlineAudioElement'],
+.activity.disabled *[data-rcfinteraction='videoElement'],
+.activity.disabled .splitScreenBlock > div {
+	pointer-events: all;
+}
+
+
+.activity.disabled *[data-rcfinteraction] span[data-rcfinteraction='inlineAudioElement'] {
+	pointer-events: none;
+}
+
+.activity.disabled *[data-rcfinteraction='simpleCarousel'] span[data-rcfinteraction='inlineAudioElement'],
+.activity.disabled *[data-rcfinteraction='carousel'] span[data-rcfinteraction='inlineAudioElement'] {
+	pointer-events: all;
+}
+
+/* feedback / activityMode styles */
+.activity.disabled .writingContainer *,
+.activity.disabled .recordingContainer * {
+	pointer-events: all;
+}
+
+.reviewTeacherFeedback .questionScore .scoreLabel {
+	color: #20a9c4;
+}
+
+.scoreTotalLabel {
+    background-color: #BBB;
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.scoreContainer .score {
+	font-weight: bold;
+}
+
+/* recording interaction with feedback */
+.recordingContainer {
+	background: #eee;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.noRecordingSupport {
+	display: none;
+}
+
+/* show 'no recording available' if it's not available in the browser */
+.no-getusermedia .noRecordingSupport {
+	display: block;
+	text-align: center;
+}
+
+.no-getusermedia.IE .noRecordingSupport {
+	display: none;
+}
+
+.recordingContainer textarea.rcfTextArea {
+	box-shadow: none;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.recordingContainer .studentRecordingControlsContainer {
+	display: block;
+}
+
+.IE .recordingContainer .studentRecordingControlsContainer {
+	display: block!important;
+}
+
+.recordingContainer .largeAudioRecording {
+	display: block;
+	min-height: 45px;
+	max-height: 50px;
+	position: relative;
+	background: #d7d7d7;
+}
+
+.recordingContainer .largeAudioRecording .largeAudioRecordingPanel .audioRecordingControls  {
+	position:relative;
+	height: initial;
+}
+
+.recordingContainer .largeAudioRecording .largeAudioRecordingPanel {
+	display: block;
+}
+
+.recordingContainer .largeAudioRecordingPanel .recordingProgressContainer {
+	top: 20px;
+}
+
+.recordingContainer .teacherLeaveFeedbackInteractions {
+	display: none;
+}
+
+.recordingContainer .reviewFeedbackInteractions {
+	display: none;
+}
+
+.recordingContainer .scoreContainer {
+	display: none;
+	margin-top: 0.5em;
+}
+
+.activity.leaveTeacherFeedback .recordingContainer .studentRecordingControlsContainer,
+.activity.reviewTeacherFeedback .recordingContainer .studentRecordingControlsContainer {
+	display: none;
+}
+
+.userIconInteractionContainer{
+	display: flex;
+	align-items: flex-start;
+}
+.userIconInteractionContainer .userIcon,
+.userIconInteractionContainer .userOpenContent {
+	align-self: flex-start;
+}
+
+.recordingContainer .userIcon {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 40px;
+	width: 40px;
+}
+.studentOpenInteractionsContainer .userIcon {
+	background-image: url(../images/iconStudent.jpg)
+}
+.teacherOpenInteractionsContainer .userIcon {
+	background-image: url(../images/iconTeacher.jpg)
+}
+
+
+
+/* feedback content */
+.userOpenContent {
+  width: 100%;
+  margin-left: 20px;
+  width: calc(100% - 60px);
+}
+/* audio recorder */
+.recordingAudioContainer {
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+/* text */
+.reviewTeacherInteractionComment {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+/* show recording feedback blocks only if recording is available on device */
+.getusermedia .activity.leaveTeacherFeedback .recordingContainer .teacherLeaveFeedbackInteractions,
+.no-getusermedia.IE .activity.leaveTeacherFeedback .recordingContainer .teacherLeaveFeedbackInteractions {
+	display: block;
+}
+
+.getusermedia .activity.reviewTeacherFeedback .recordingContainer .reviewFeedbackInteractions,
+.no-getusermedia.IE .activity.reviewTeacherFeedback .recordingContainer .reviewFeedbackInteractions {
+	display: block;
+}
+
+.getusermedia .activity.reviewTeacherFeedback .recordingContainer .scoreContainer,
+.no-getusermedia.IE .activity.reviewTeacherFeedback .recordingContainer .scoreContainer {
+	display: block;
+}
+
+.recordingContainer .reviewFeedbackInteractions .reviewTeacherInteractionComment {
+	border: 1px solid #ddd;
+	padding: 5px;
+	min-height: 120px;
+	max-height: 250px;
+	overflow-y: scroll;
+	background: #fff;
+}
+
+.feedbackTabs {
+	border-radius: 6px;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	list-style: none;
+	background-color: #fff;
+  	border: 1px solid #ddd;
+}
+
+.feedbackTabs .tab {
+	display: none;
+}
+
+.feedbackTabs .tab.tab1:checked ~ .tabContent.tab1,
+.feedbackTabs .tab.tab2:checked ~ .tabContent.tab2,
+.feedbackTabs .tab.tab3:checked ~ .tabContent.tab3 {
+	opacity: 1;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+
+.tab:not(:checked):not(:last-of-type) + label {
+    border-right: 1px solid #fff;
+}
+
+.tab:first-of-type:not(:last-of-type) + label {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.tab:not(:first-of-type):not(:last-of-type) + label {
+	border-radius: 0;
+}
+.tab:last-of-type:not(:first-of-type) + label {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.tab:checked + label {
+	background-color: #fff;
+	box-shadow: 0 -1px 0 #fff inset;
+	cursor: default;
+	color: #333;
+}
+.tab + label {
+	box-shadow: 0 -1px 0 #eee inset;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	-webkit-box-flex: 3;
+	-webkit-flex-grow: 3;
+	  -ms-flex-positive: 3;
+	      flex-grow: 3;
+	text-align: center;
+	background-color: #666;
+	-webkit-user-select: none;
+	 -moz-user-select: none;
+	  -ms-user-select: none;
+	      user-select: none;
+	text-align: center;
+	height: 40px;
+	box-sizing: border-box;
+	padding: 8px;
+	text-transform: uppercase;
+}
+
+.tabContent {
+	padding: 10px 25px;
+	background-color: transparent;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	left: 0;
+	-webkit-transform: translateY(-3px);
+	      transform: translateY(-3px);
+	border-radius: 6px;
+}
+
+
+.no-getusermedia .recordingContainer .studentRecordingControlsContainer,
+.no-getusermedia .recordingContainer .teacherLeaveFeedbackInteractions,
+.no-getusermedia .recordingContainer .reviewFeedbackInteractions {
+	display: none;
+}
+
+
+/* writing (open-gradable) interaction */
+.writingContainer {
+	border: 1px solid #ddd;
+	background: #eee;
+	padding: 10px;
+}
+
+.writingContainer textarea.rcfTextArea {
+	box-shadow: none;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    background: white;
+}
+/*.writingContainer .teacherScoreInput {
+	line-height: 2.5em;
+	border: 1px solid #ddd;
+    text-align: center;
+}*/
+.writingContainer .reviewStudentAnswer,
+.writingContainer .reviewTeacherInteractionComment {
+	border: 1px solid #ddd;
+	padding: 5px;
+	background: #fff;
+	min-height: 40px;
+	display: none;
+	line-height: normal;
+	font-size: 0.9em;
+}
+
+.writingContainer .commented .item {
+    text-decoration: line-through;
+    background-color: #ccc;
+}
+
+.writingContainer .reviewStudentAnswer .teacherComment {
+	background-color: #DDf32B;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.writingContainer .reviewPopupPrompt .cancelButton {
+	float: left;
+}
+
+.writingContainer .reviewPopupPrompt .okButton {
+	float: right;
+	margin-right: 0;
+}
+
+
+.writingContainer .teacherScoringContainer,
+.writingContainer .teacherInteractionComment,
+.writingContainer .scoreContainer {
+	margin-top: 0.5em;
+}
+
+.activity .teacherFeedbackInteractions,
+.activity .reviewFeedbackScore {
+	display:none;
+}
+
+.activity.leaveTeacherFeedback .writingContainer .studentInteractions,
+.activity.reviewTeacherFeedback .writingContainer .studentInteractions {
+	display: none;
+}
+
+.activity.leaveTeacherFeedback .teacherFeedbackInteractions,
+.activity.leaveTeacherFeedback .teacherFeedbackInteractions .reviewStudentAnswer,
+.activity.reviewTeacherFeedback .teacherFeedbackInteractions .reviewStudentAnswer,
+.activity.leaveTeacherFeedback .teacherInteractionComment,
+.activity.reviewTeacherFeedback .teacherFeedbackInteractions {
+	display: block;
+}
+
+.activity.reviewTeacherFeedback textarea.teacherInteractionCommentTextArea,
+.activity.reviewTeacherFeedback .teacherScoringContainer {
+	display: none;
+}
+
+/* only show recording controls / panels when recording is available ! */
+.getusermedia .activity.reviewTeacherFeedback .recordingContainer .reviewFeedbackScore,
+.getusermedia .activity.reviewTeacherFeedback .recordingContainer .teacherFeedbackInteracions,
+.getusermedia .activity.reviewTeacherFeedback .recordingContainer .reviewTeacherInteractionComment,
+.no-getusermedia.IE .activity.reviewTeacherFeedback .recordingContainer .reviewFeedbackScore,
+.no-getusermedia.IE .activity.reviewTeacherFeedback .recordingContainer .teacherFeedbackInteracions,
+.no-getusermedia.IE .activity.reviewTeacherFeedback .recordingContainer .reviewTeacherInteractionComment {
+	display: block;
+}
+
+.activity.reviewTeacherFeedback .writingContainer .reviewFeedbackScore,
+.activity.reviewTeacherFeedback .writingContainer .teacherFeedbackInteracions,
+.activity.reviewTeacherFeedback .writingContainer .reviewTeacherInteractionComment {
+	display: block;
+}
+
+.studentWord {
+	position:relative;
+}
+
+/* ANSWER KEY */
+.answerKeyList li:not(:last-child) {
+	margin-bottom: 0.25em;
+}
+.answerKey {
+	border: 1px solid #C0C0C5;
+	padding: 0.2em 0.5em;
+	display: inline-block;
+	border-radius: 10px;
+	color: transparent;
+	background-color: transparent;
+}
+.answerKey:not(.example) {
+	cursor: pointer;
+}
+.answerKey:not(.example):hover {
+	background-color: #C0C0C5;
+}
+.answerKey.selected {
+	color: #000;
+}
+.answerKey.example {
+	color: #8E8E91;
+}
+
+/* ITEM BASED */
+
+.activity .itemBasedErrors {
+	color: #CD0000;
+	background: #FFF;
+	border: 1px solid #CD0000;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+.itemBasedQuestionsContainer .itemBasedQuestion {
+	display: none;
+}
+.itemBasedQuestionsContainer .itemBasedQuestion.active {
+	display: block;
+}
+
+/* ripple buttons */
+/* default child element created inside button element */
+.rippleAnimate {
+    position: absolute;
+    -webkit-animation: fake-ripples 1s forwards;
+    -moz-animation: fake-ripples 1s forwards;
+    -o-animation: fake-ripples 1s forwards;
+    -ms-animation: fake-ripples 1s forwards;
+    animation: fake-ripples 1s forwards;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: black;
+}
+
+/* standard button with rcfRipple class added */
+.rcfRippleButton {
+    position:relative;
+    overflow:hidden;
+}
+
+@-webkit-keyframes fake-ripples {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.49;
+    }
+    100% {
+        -webkit-transform: scale(20);
+        -moz-transform: scale(20);
+        -o-transform: scale(20);
+        -ms-transform: scale(20);
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fake-ripples {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.49;
+    }
+    100% {
+        -webkit-transform: scale(20);
+        -moz-transform: scale(20);
+        -o-transform: scale(20);
+        -ms-transform: scale(20);
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fake-ripples {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.49;
+    }
+    100% {
+        -webkit-transform: scale(20);
+        -moz-transform: scale(20);
+        -o-transform: scale(20);
+        -ms-transform: scale(20);
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+@-ms-keyframes fake-ripples {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.49;
+    }
+    100% {
+        -webkit-transform: scale(20);
+        -moz-transform: scale(20);
+        -o-transform: scale(20);
+        -ms-transform: scale(20);
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+@keyframes fake-ripples {
+    0% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.49;
+    }
+    100% {
+        -webkit-transform: scale(20);
+        -moz-transform: scale(20);
+        -o-transform: scale(20);
+        -ms-transform: scale(20);
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+/* STORY */
+.story {
+  position: relative;
+}
+
+.cover,
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.frame .speech {
+  position: absolute;
+  background: #FFF;
+  margin: 0;
+}
+.frame .speech p {
+  position: relative;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.frame [class*='tip'].speech p:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  border-style: solid;
+}
+
+.frame [class*='tipTop'].speech p:after {
+  top: -10px;
+  left: calc(50% - 10px);
+  border-width: 0 10px 10px;
+  border-color: #FFF transparent;
+}
+.frame .speech.tipTopLeft p:after {
+  left: 10px;
+}
+.frame .speech.tipTopRight p:after {
+  left: auto;
+  right: 10px;
+}
+.frame [class*='tipRight'].speech p:after {
+  top: calc(50% - 10px);
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent #FFF;
+}
+.frame .speech.tipRightTop p:after {
+  top: 10px;
+}
+.frame .speech.tipRightBottom p:after {
+  top: auto;
+  bottom: 10px;
+}
+.frame [class*='tipBottom'].speech p:after {
+  bottom: -10px;
+  left: calc(50% - 10px);
+  border-width: 10px 10px 0;
+  border-color: #FFF transparent;
+}
+.frame .speech.tipBottomLeft p:after {
+  left: 10px;
+}
+.frame .speech.tipBottomRight p:after {
+  left: auto;
+  right: 10px;
+}
+.frame [class*='tipLeft'].speech p:after {
+  top: calc(50% - 10px);
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #FFF;
+}
+.frame .speech.tipLeftTop p:after {
+  top: 10px;
+}
+.frame .speech.tipLeftBottom p:after {
+  top: auto;
+  bottom: 10px;
+}
+
+/* Story: modes */
+.story .cover {
+  position: relative;
+  display: inline-block;
+}
+.story .cover .modes {
+  position: absolute;
+  bottom: 1em;
+  text-align: center;
+  width: 100%;
+}
+.story .modes ul {
+  position: relative;
+  display: inline-block;
+  background-color: #FFF;
+  text-align: center;
+  padding: 5px;
+}
+
+.story .modes .button {
+  display: none;
+  padding: 5px;
+  border: 1px solid #000;
+}
+.story .modes .button.active {
+  display: inline-block;
+}
+/* hide speech bubbles in listen only mode */
+.story.modeListen .speech {
+  display: none;
+}
+/* sequence */
+.frame .speech {
+  display: none; /* hidden by default */
+}
+.frame .speech.active {
+  display: block;
+}
+
+.cover.hide .modes .button {
+	display: none;
+}
+
+/* Story: transitions */
+.cover, .scene {
+  opacity: 1;
+	z-index: 999;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+.cover.hide,
+.scene.hide {
+  opacity: 0;
+	z-index: 1;
+}
+/* Story: comprehension questions */
+.scene.comprehension {
+  background-color: #FFF;
+    height: 100%;
+}
+.scene.comprehension .questions {
+  display: none;
+}
+.scene.showQuestions .frame {
+    -ms-transform: scale(0.75, 0.75);
+    -webkit-transform: scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
+    -ms-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+.scene.showQuestions .questions {
+  display: block;
+  margin-top: -175.5px; /* 702 - (702 * 0.75) */
+}
+/* Story: navigation */
+.story .navigation {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+	z-index: 1000;
+}
+.story .navigation ul {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  text-align: center;
+  padding: 5px;
+}
+.story .navigation .button {
+  display: none;
+  padding: 5px;
+  border: 1px solid #000;
+}
+.story .navigation .button.active {
+  display: inline-block;
+}
+
+/*********************** Flash Fallback ********************/
+body > object[type='application/x-shockwave-flash']  {
+	visibility: hidden;
+}
+
+.itemComplexDroppable.dragTarget * {
+	pointer-events: none;
+}
+.itemComplexDroppable.dragTarget .inlinePlayerContainer,
+.itemComplexDroppable.dragTarget .inlinePlayerContainer * {
+	pointer-events: all;
+}
+/************************** THEME **************************/

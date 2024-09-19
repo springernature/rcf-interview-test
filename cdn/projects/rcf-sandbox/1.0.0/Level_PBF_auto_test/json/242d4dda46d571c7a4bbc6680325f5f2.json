@@ -1,0 +1,20 @@
+{
+  "id": "242d4dda46d571c7a4bbc6680325f5f2",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "droppable_1",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "droppable_1"
+    },
+    {
+      "elm": "droppable_2",
+      "type": "simple",
+      "markType": "item",
+      "markedBy": "engine",
+      "value": "droppable_2"
+    }
+  ]
+}

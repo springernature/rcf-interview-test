@@ -1,0 +1,27 @@
+1
+00:00:00,034 --> 00:00:05,313
+Hi, my name is John, I'm British and I like reading books and comics. 
+
+2
+00:00:05,834 --> 00:00:09,700
+I want to tell you about my favourite comic character, Iron Man. 
+
+3
+00:00:10,257 --> 00:00:17,031
+He's American, his real name is Tony Stark and he is an engineering genius and a millionaire. 
+
+4
+00:00:17,954 --> 00:00:22,136
+Iron Man is a member of a superhero team, called The Avengers. 
+
+5
+00:00:22,865 --> 00:00:25,710
+The team fights with criminals and terrorists. 
+
+6
+00:00:26,575 --> 00:00:31,982
+Morgan, Iron Man's only cousin, is not in the team, he is a villain. 
+
+7
+00:00:32,653 --> 00:00:39,889
+For me, Iron Man is the best superhero in the world, but my friends like Superman or the Hulk too.

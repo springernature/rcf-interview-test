@@ -1,0 +1,492 @@
+.audioPlayer {
+	position: absolute; /*Do not set to display none, as this breaks the flash playback*/
+	width: 0px;
+	height: 0px;
+}
+.audioContainer.large{
+	position: relative;
+	*z-index:1;
+	margin-bottom: 1em;
+}
+.audio.large .audioInterface, .audio.medium .audioInterface, .videoPlayerInterface {
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+.audioContainer.large .audioInterface{
+	width: 268px;
+	height: 55px;
+}
+.tabletMode .audioContainer.large .audioInterface, .mobileMode .audioContainer.large .audioInterface{
+	width: 233px;
+}
+.audioContainer.medium .audioInterface {
+	width: 194px;
+	height: 68px;
+}
+
+.audioContainer.large.noSubtitles .audioScriptButton, .audioContainer.medium {
+		display: none;
+}
+
+.audioContainer.small .audioInterface {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 5px;
+}
+.audio.small {
+	background: none;
+	border: none;
+}
+.audioContainer.small a {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+
+}
+
+.audioTitle {
+	display: none;
+}
+
+/* AUDIO CONTROLS POSITIONING */
+
+/*Get the text out the way!*/
+.audio ul.audioControls a, .videoPlayerInterface ul.videoControls a, .videoPlayerInterface ul.videoToggles a {
+	position: absolute;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 35px;
+	height: 35px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-position: center;
+
+/*	 border: 1px solid #999;*/
+}
+
+
+a.audioPlayButton, a.audioPauseButton {
+	top: 10px;
+	left: 4px;
+}
+
+a.videoPlayButton, a.videoPauseButton {
+	top:14px;
+	left: 4px;
+}
+
+.audio.medium a.audioPlayButton {
+	top:6px;
+	left:10px;
+}
+.mobileMode .audio.medium a.audioPlayButton, .tabletMode .audio.medium a.audioPlayButton {
+	left:21px;
+}
+a.audioStopButton, a.videoStopButton {
+	top: 10px;
+	left: 41px;
+}
+a.videoStopButton {
+	top:14px;
+}
+.audio.medium a.audioStopButton {
+		top:6px;
+	left:57px;
+}
+.mobileMode .audio.medium a.audioStopButton, .tabletMode .audio.medium a.audioStopButton {
+	left:79px;
+}
+a.audioScriptButton {
+	top: 10px;
+	left: 190px;
+}
+.audio.medium a.audioScriptButton {
+		top:6px;
+	left: 102px;
+}
+.mobileMode .audio.medium a.audioScriptButton, .tabletMode .audio.medium a.audioScriptButton {
+	left:136px;
+}
+.tabletMode .audioMuteButtonContainer, .mobileMode .audioMuteButtonContainer {
+	display: none;
+}
+a.videoMuteButton, a.videoUnmuteButton {
+	top: 14px;
+	right: 0px;
+}
+a.audioMuteButton, a.audioUnmuteButton {
+	top: 10px;
+	left: 227px;
+}
+.audio.medium a.audioMuteButton, .audio.medium a.audioUnmuteButton {
+		top:6px;
+	left: 147px;
+}
+.tabletMode a.audioMuteButton, .tabletMode a.audioUnmuteButton {
+	display: none;
+}
+
+.noSubtitles a.audioScriptButton {
+	display: none;
+}
+
+.audioCurrentTime, .audioDuration  {
+	top: 34px;
+	left: 84px;
+	width: 100px;
+	height: 15px;
+	position: absolute;
+	font-size: 12px;
+	font-style: oblique;
+	line-height: 12px;
+	text-align: left;
+}
+.videoCurrentTime, .videoDuration {
+	position: absolute;
+	top: 26px;
+	height: 15px;
+	font-size: 12px;
+	font-style: oblique;
+	line-height: 12px;
+	text-align: left;
+}
+
+.videoCurrentTime {
+	left: 84px;
+}
+
+.videoDuration {
+	right: 70px;
+}
+
+.noSubtitles .audioCurrentTime, .noSubtitles .audioDuration {
+	width: 135px;
+}
+.audio.medium .audioCurrentTime, .audio.medium .audioDuration
+{
+	width: 172px;
+	left:10px;
+	top: 45px;
+}
+.audioDuration, .videoDuration {
+	text-align: right;
+}
+.audioSeekBar, .videoSeekBar {
+	background-color: #aaa; /* main background colour*/
+	width: 0px;
+	height: 100%;
+	cursor: pointer;
+}
+
+/*THE BAR!!!*/
+
+.audioProgress, .videoProgress {
+	position: absolute;
+	overflow: hidden;
+	background-color: #aaa; /* main background colour when the page loads */
+	top: 15px;
+	left: 84px;
+	width: 100px;
+	height: 15px;
+}
+
+.videoProgress {
+	top:0;
+	left: 0;
+	width:100%;
+	height: 12px;
+}
+.noSubtitles .audioProgress {
+	width: 135px;
+}
+.audio.medium .audioProgress {
+	top: 43px;
+	left: 47px;
+	width: 100px;
+}
+.audioPlayBar, .videoPlayBar {
+	background-color: #333; /* Progress colour while playing*/
+	width: 0px;
+	height: 100%;
+}
+
+/* The seeking class is added/removed inside jPlayer */
+.audioSeeking-bg {
+	background: url("../images/pbar-ani.gif");
+}
+.audioScript {
+	border: 1px solid #aaa;
+	position:absolute;
+	height: 250px;
+	z-index: 90;
+	top:56px;
+	background: #f8f8f8; /* Old browsers */
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: none;
+	overflow: auto;
+}
+
+.audio.large .audioScript {
+
+	width: 268px;
+}
+.tabletMode .audio.large .audioScript, .mobileMode .audio.large .audioScript {
+	width: 233px;
+}
+.audio.medium .audioScript {
+	top: 69px;
+	width: 194px;
+}
+.script {
+	font-size: 0.8em;
+	padding: 0.5em;
+}
+.script .playing {
+	background-color: #666;
+	color: #fff;
+}
+.script p {
+	line-height: 1.3em;
+	margin-bottom: 0.8em;
+}
+.script span {
+	cursor: pointer;
+}
+
+/*Audio controls graphics*/
+a.audioPlayButton, a.videoPlayButton {
+	background: url("../images/play.png");
+}
+/*a.audioPlayButton:active, a.videoPlayButton:active {
+	background: url("../images/playactive.png");
+}*/
+.audioContainer.small a.audioPauseButton {
+	display: none;
+}
+a.audioPauseButton, a.videoPauseButton {
+	background: url("../images/pause.png");
+	display: none;
+}
+/*a.audioPauseButton:active, a.videoPauseButton:active {
+	background: url("../images/pauseactive.png");
+}*/
+a.audioStopButton, a.videoStopButton {
+	background: url("../images/stop.png");
+}
+/*a.audioStopButton:active, a.videoStopButton:active {
+	background: url("../images/stopactive.png");
+}*/
+a.audioScriptButton {
+	background: url("../images/script.png");
+}
+
+a.videoMuteButton, a.audioMuteButton {
+	background: url("../images/mute.png");
+}
+
+a.videoUnmuteButton, a.audioUnmuteButton {
+	background: url("../images/unmute.png");
+	display: none;
+}
+.small a.audioPlayButton {
+	background: url("../images/playsmall.png");
+}
+.small a.audioPlayButton:active {
+	background: url("../images/playsmallactive.png");
+}
+.small a.audioPauseButton {
+	background: url("../images/pausesmall.png");
+
+}
+.small a.audioPauseButton:active {
+	background: url("../images/pausesmallactive.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-device-pixel-ratio:2) {
+	a.audioPlayButton, a.videoPlayButton {
+		background: url("../images/play@2x.png");
+		background-size:19px;
+	}
+	/*a.audioPlayButton:active {
+			background: url("../images/playactive@2x.png");
+		}*/
+	a.audioPauseButton, a.videoPauseButton {
+		background: url("../images/pause@2x.png");
+		background-size:15px;
+	}
+	/*a.audioPauseButton:active {
+			background: url("../images/pauseactive@2x.png");
+		}*/
+	a.audioStopButton {
+		background: url("../images/stop@2x.png");
+		background-size:15px;
+	}
+	/*a.audioStopButton:active {
+			background: url("../images/stopactive@2x.png");
+		}*/
+	a.audioScriptButton {
+		background: url("../images/script@2x.png");
+		background-size:25px;
+	}
+	a.audioScriptButton:active {
+		background: url("../images/scriptactive@2x.png");
+	}
+	a.audioMuteButton {
+		background: url("../images/mute@2x.png");
+		background-size: 21px;
+	}
+	a.audioMuteButton:active {
+		background: url("../images/muteactive@2x.png");
+	}
+	a.audioUnmuteButton {
+		background: url("../images/unmute@2x.png");
+	}
+
+	.small a.audioPlayButton {
+		background: url("../images/playsmall@2x.png");
+		background-size:100%;
+	}
+	.small a.audioPlayButton:active {
+		background: url("../images/playsmallactive@2x.png");
+	}
+	.small a.audioPauseButton {
+		background: url("../images/pausesmall@2x.png");
+		display: none;
+		background-size:100%;
+	}
+	.small a.audioPauseButton:active {
+		background: url("../images/pausesmallactive@2x.png");
+	}
+
+}
+
+
+
+/* video interface*/
+
+div.jp-video-full {
+	/* Rules for IE6 (full-screen) */
+	/*width:480px;
+	height:270px;*/
+	/* Rules for IE7 (full-screen) - Otherwise the relative container causes other page items that are not position:static (default) to appear over the video/gui. */
+	position:static !important; position:relative;
+}
+
+/* The z-index rule is defined in this manner to enable Popcorn plugins that add overlays to video area. EG. Subtitles. */
+div.jp-video-full div div {
+	z-index:1000;
+}
+
+div.jp-video-full div.jp-jplayer {
+	top: 0;
+	left: 0;
+	position: fixed !important; position: relative; /* Rules for IE6 (full-screen) */
+	overflow: hidden;
+}
+
+div.jp-video-full div.jp-gui {
+	position: fixed !important; position: static; /* Rules for IE6 (full-screen) */
+	/*top: 0;*/
+	bottom: 0;
+	left: 0;
+	width:100%;
+	height:50px;
+	z-index:1001; /* 1 layer above the others. */
+}
+div.jp-video-full div.jp-interface {
+	position: absolute !important; position: relative; /* Rules for IE6 (full-screen) */
+	bottom: 0;
+	left: 0;
+	right:0;
+}
+
+
+div.jp-type-single {
+	background: #000;
+}
+
+div.videoPlayer {
+	background-color: #000000;
+	background: url(../images/poster.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+div.jp-video-full div.videoPlayer {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+
+.videoPlayerInterface {
+	position:relative;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border-top-color: #000;
+	margin-bottom: 1em;
+}
+
+.jp-video-full .videoPlayerInterface {
+	width: 100%;
+}
+
+.videoContainer.jp-state-playing .videoPlayer,
+.videoContainer.jp-state-paused .videoPlayer {
+	background: #1D1D1B;
+}
+
+.videoTitle {
+	display: none;
+}
+
+.videoFullScreen {
+	right: 30px;
+	top: 14px;
+	background: url("../images/fullscreen.png");
+}
+.videoRestoreScreen {
+	right: 30px;
+	top: 14px;
+	display:none;
+	background: url("../images/fullscreen_exit.png");
+}
+
+/* The seeking class is added/removed inside jPlayer */
+.videoSeeking-bg {
+	background: url("../images/pbar-ani.gif");
+}
+
+
+.videoToggles {
+
+}
+
+.videoPlayer img {
+	cursor: pointer;
+}

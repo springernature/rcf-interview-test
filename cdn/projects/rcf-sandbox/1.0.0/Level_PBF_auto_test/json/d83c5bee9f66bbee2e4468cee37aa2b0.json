@@ -1,0 +1,26 @@
+{
+  "id": "d83c5bee9f66bbee2e4468cee37aa2b0",
+  "rcfVersion": "2.1.64",
+  "answers": [
+    {
+      "elm": "sb_1",
+      "type": "choice",
+      "markType": "list",
+      "markedBy": "engine",
+      "items": [
+        "item_0",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6"
+      ],
+      "value": [
+        "doyouknowwherethetoiletsare?",
+        "doyouknowwherethetoiletsare",
+        "youknowwherethetoiletsare"
+      ]
+    }
+  ]
+}
